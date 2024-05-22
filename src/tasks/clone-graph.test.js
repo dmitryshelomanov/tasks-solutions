@@ -19,9 +19,9 @@ function t(node) {
   // 11.       add the new node to the neighbors of the new node
   if (!node) return null;
 
-  let newNode = new Node(node.val);
-  let queue = [node];
-  let visited = new Map();
+  const newNode = new Node(node.val);
+  const queue = [node];
+  const visited = new Map();
 
   visited.set(node, newNode);
 
@@ -30,14 +30,16 @@ function t(node) {
 
     for (let neighbor of currentNode.neighbors) {
       if (!visited.has(neighbor)) {
-        let newNeighbor = new Node(neighbor.val);
+        const newNeighbor = new Node(neighbor.val);
 
         queue.push(neighbor);
         visited.set(neighbor, newNeighbor);
       }
+
       visited.get(currentNode).neighbors.push(visited.get(neighbor));
     }
   }
+
   return newNode;
 }
 

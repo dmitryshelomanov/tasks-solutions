@@ -1,5 +1,12 @@
 import { expect, test } from "vitest";
 
+/*
+ Задача
+ Просумировать число так что бы в итоге осталось одно значение
+ 123 -> 6
+ 123456 -> 21 -> 3
+*/
+
 function t(num) {
   while (num >= 10) {
     let temp = num;
