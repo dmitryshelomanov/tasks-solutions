@@ -37,3 +37,12 @@ test("ATM", () => {
   expect(t(20000, { 5000: 2, 500: 3, 1000: 4, 2000: 5 })).toBe("5000x2,2000x5");
   expect(t(20000, { 5000: 2 })).toBe("no money enough");
 });
+
+test("ATM - queue", () => {
+  const limits = { 5000: 2, 500: 3, 1000: 4, 2000: 5 };
+
+  const rs = [5000, 10000, 20000].map((sum) => t(sum, limits));
+
+  expect(rs).toEqual(["5000x1", "5000x1,2000x2,1000x1", "no money enough"]);
+  expect(limits).toEqual({ 500: 3, 1000: 3, 2000: 3, 5000: 0 });
+});

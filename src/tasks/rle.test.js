@@ -1,23 +1,20 @@
 import { expect, test } from "vitest";
 
 function t(str) {
-  const { rs } = str.split("").reduce(
-    (acc, char, index) => {
-      const nextChar = str[index + 1];
+  const acc = { counter: 0, rs: "" };
 
-      acc.counter += 1;
+  for (let i = 0; i < str.length; i++) {
+    const nextChar = str[i + 1];
 
-      if (nextChar !== char) {
-        acc.rs += acc.counter > 1 ? `${char}${acc.counter}` : char;
-        acc.counter = 0;
-      }
+    acc.counter += 1;
 
-      return acc;
-    },
-    { counter: 0, rs: "" }
-  );
+    if (nextChar !== str[i]) {
+      acc.rs += acc.counter > 1 ? `${str[i]}${acc.counter}` : str[i];
+      acc.counter = 0;
+    }
+  }
 
-  return rs;
+  return acc.rs;
 }
 
 test("Get prime number", () => {
