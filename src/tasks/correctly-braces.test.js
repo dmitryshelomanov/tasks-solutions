@@ -7,24 +7,18 @@ const brackets = {
   "<": ">",
 };
 
-const bracketsRevert = Object.keys(brackets).reduce(
-  (acc, key) => ({ ...acc, [brackets[key]]: key }),
-  {}
-);
-
 function t(str) {
-  const bracketsStack = str.split("");
   const openedStack = [];
 
-  while (bracketsStack.length > 0) {
-    const bracket = bracketsStack.shift();
+  for (let i = 0; i < str.length; i++) {
+    const bracket = str[i];
 
     if (brackets[bracket]) {
-      openedStack.unshift(bracket);
+      openedStack.unshift(brackets[bracket]);
       continue;
     }
 
-    if (bracketsRevert[bracket] !== openedStack.shift()) {
+    if (bracket !== openedStack.shift()) {
       return false;
     }
   }
@@ -34,6 +28,9 @@ function t(str) {
 
 test("Corretly braces", () => {
   expect(t("<>")).toBe(true);
+  expect(t("][")).toBe(false);
+  expect(t("[[")).toBe(false);
+  expect(t("]]")).toBe(false);
   expect(t("<>]")).toBe(false);
   expect(t("[<]>")).toBe(false);
   expect(t("[<>]")).toBe(true);

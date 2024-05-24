@@ -13,16 +13,17 @@ function uniqueSubstring(str) {
   const map = {};
 
   while (right < str.length) {
-    if (!map[str[right]]) {
-      map[str[right]] = 0;
+    if (typeof map[str[right]] !== "undefined") {
+      const nextLeft = map[str[right]] + 1;
+
+      for (let i = left; i < nextLeft; i++) {
+        map[str[i]] = undefined;
+      }
+
+      left = nextLeft;
     }
 
-    map[str[right]]++;
-
-    if (map[str[right]] > 1) {
-      map[str[left]]--;
-      left += map[str[right]];
-    }
+    map[str[right]] = right;
 
     maxLen = Math.max(maxLen, right - left + 1);
     right++;
@@ -32,8 +33,10 @@ function uniqueSubstring(str) {
 }
 
 test("uniqueSubstring", () => {
-  expect(uniqueSubstring("aaaaaaab")).toEqual(2);
   expect(uniqueSubstring("abcabcbb")).toEqual(3);
+  expect(uniqueSubstring("abcdeagktuio")).toEqual(11);
+  expect(uniqueSubstring("abccdef")).toEqual(4);
+  expect(uniqueSubstring("aaaaaab")).toEqual(2);
   expect(uniqueSubstring("aaabbbbg")).toEqual(2);
   expect(uniqueSubstring("abcdefghj")).toEqual(9);
   expect(uniqueSubstring("abcdefgha")).toEqual(8);
