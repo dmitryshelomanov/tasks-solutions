@@ -6,6 +6,8 @@ import { expect, test } from "vitest";
  * @param {number[]} fruits
  * @return {number}
  * Суть в том что мы двигаем указатели в одну сторону с постоянным увеличением
+ *
+ * #hastable
  */
 function totalFruit(fruits) {
   let left = 0;

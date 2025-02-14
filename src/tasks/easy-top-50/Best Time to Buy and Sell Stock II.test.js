@@ -9,6 +9,7 @@ import { expect, test } from "vitest";
 
 // Find and return the maximum profit you can achieve.
 
+// #naive, #arrays
 /**
  * @param {number[]} prices
  * @return {number}

@@ -1,5 +1,7 @@
 import { expect, test } from "vitest";
 
+// #hastable
+
 function isAnagram(a = "", b = "") {
   if (a.length != b.length) {
     return false;
@@ -30,5 +32,6 @@ function isAnagram(a = "", b = "") {
 
 test("isAnagram", () => {
   expect(isAnagram("finder", "friend")).toBe(true);
+  expect(isAnagram("finder", "friedn")).toBe(true);
   expect(isAnagram("hello", "buy")).toBe(false);
 });

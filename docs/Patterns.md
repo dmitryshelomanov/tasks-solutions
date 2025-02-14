@@ -1,3 +1,7 @@
+Детальнее
+
+https://tproger.ru/translations/14-templates-to-answer-interview-questions
+
 # Шаблоны
 
 14 шаблонов, которые мы рассмотрим сегодня:
