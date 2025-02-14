@@ -1,0 +1,129 @@
+# Scope
+
+## Example 1
+
+```js
+var a = 2;
+
+function Foo() {
+  var a = 1;
+
+  console.log("Foo", a);
+}
+
+Foo(); // 1 потому что у Foo есть переменная в области видимости
+```
+
+## Example 2
+
+```js
+var a = 2;
+
+function Foo() {
+  a = 1; // Потому что тут мы меняем глобальную a
+
+  console.log("Foo", a); // 1
+}
+
+Foo();
+
+console.log("Glob", a); // 1
+```
+
+# Ctx
+
+Когда включен strict mode, объект 'global' не подпадает под действие привязки по умолчанию, поэтому в противоположность обычному режиму this устанавливается в undefined.
+
+**Неявная привязка**
+Рассмотрим еще одно правило: есть ли у точки вызова объект контекста, также называемый как владеющий или содержащий объект, хотя эти альтернативные термины могут немного вводить в заблуждение.
+
+**Привязка по умолчанию (this)**
+Первое правило, которое мы изучим, исходит из самого распространенного
+случая вызовов функции: отдельный вызов функции.
+Представьте себе это правило this как правило,
+ действующее по умолчанию когда остальные правила не применяются.
+
+## Example 1
+
+
+```js
+const SomeClass = {
+  name: "Dmitry",
+  greeting: function () {
+    console.log("Hi !", this.name);
+  },
+};
+
+SomeClass.greeting(); // Всегда ctx это обьект стоящий слева от функции
+// Если его не будет - смотреть будет в window
+```
+
+## Example 2
+
+```js
+const SomeClass = {
+  name: "Dmitry",
+  getOnlyName: function () {
+    const names = ["Dmitry", "Oleg", "Vanya"];
+
+    return names.filter(function f(name) {
+      // this = window
+      return this.name !== name;
+    });
+  },
+};
+
+console.log(SomeClass.getOnlyName()); // ['Dmitry', 'Oleg', 'Vanya']
+```
+
+# Arrow functions
+
+Стрелочные функции обозначаются не ключевым словом function, а операцией =>, так называемой "жирной стрелкой". Вместо использования четырех стандартных this-правил, стрелочные функции заимствуют привязку this из окружающей (функции или глобальной) области видимости.
+
+# Total
+
+Определение привязки this для вызова функции требует поиска непосредственной точки вызова этой функции. Как уже выяснилось, к точке вызова могут быть применены четыре правила, в именно таком порядке приоритета:
+
+- Вызвана с new? Используем только что созданный объект.
+- Вызвана с помощью call или apply (или bind)? Используем указанный объект.
+- Вызвана с объектом контекста, владеющего вызовом функции? Используем этот объект контекста.
+- По умолчанию: undefined в режиме strict mode, в противном случае объект global.
+
+Остерегайтесь случайного/неумышленного вызова с применением правила привязки по умолчанию. В случаях, когда вам нужно "безопасно" игнорировать привязку this, "DMZ"-объект, подобный ø = Object.create(null), — хорошая замена, защищающая объект global от непредусмотренных побочных эффектов.
+
+Вместо четырех стандартных правил привязки стрелочные функции ES6 используют лексическую область видимости для привязки this, что означает, что они заимствуют привязку this (какой бы она ни была) от вызова своей окружающей функции. Они по существу являются синтаксической заменой self = this в до-ES6 коде.
+
+# Bind polyfill
+
+```js
+  if (!Function.prototype.bind) {
+    Function.prototype.bind = function(oThis) {
+      if (typeof this !== "function") {
+        // наиболее подходящая вещь в ECMAScript 5
+        // внутренняя функция IsCallable
+        throw new TypeError( "Function.prototype.bind - what " +
+          "is trying to be bound is not callable"
+        );
+      }
+
+      var aArgs = Array.prototype.slice.call( arguments, 1 ),
+        fToBind = this,
+        fNOP = function(){},
+        fBound = function(){
+          return fToBind.apply(
+            (
+              this instanceof fNOP &&
+              oThis ? this : oThis
+            ),
+            aArgs.concat( Array.prototype.slice.call( arguments ) )
+          );
+        }
+      ;
+
+      fNOP.prototype = this.prototype;
+      fBound.prototype = new fNOP();
+
+      return fBound;
+    };
+  }
+```

@@ -17,7 +17,10 @@ function compose(...funcs) {
 }
 
 test("Compose works ", () => {
-  const result = compose(String.prototype.toUpperCase, String.prototype.split);
+  const result = compose(
+    (str) => str.split(""),
+    (str) => str.toUpperCase()
+  );
 
-  expect(result("name")).toEqual(3);
+  expect(result("name")).toEqual(["N", "A", "M", "E"]);
 });
