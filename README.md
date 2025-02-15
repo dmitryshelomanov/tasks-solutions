@@ -7,6 +7,7 @@
 > #arrays задачи про массивы
 > #strings задачи про строки
 > #hastable для таблиц
+> #matrix про матрицы
 
 # src/functions
 
