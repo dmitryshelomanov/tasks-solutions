@@ -2,12 +2,8 @@ import { expect, test } from "vitest";
 
 // #two_pointers
 
-const isEqual = (str1 = "", str2 = "") => {
-  return str1.toLowerCase() === str2.toLowerCase();
-};
-
 const isLetter = (char) => {
-  return char.toLowerCase() !== char.toUpperCase();
+  return /[a-zа-я0-9]/.test(char);
 };
 
 function isPalindrome(str) {
@@ -15,8 +11,8 @@ function isPalindrome(str) {
   let end = str.length - 1;
 
   while (start < end) {
-    const firstChar = str[start];
-    const endChar = str[end];
+    const firstChar = str[start].toLowerCase();
+    const endChar = str[end].toLowerCase();
 
     if (!isLetter(firstChar)) {
       start += 1;
@@ -28,7 +24,7 @@ function isPalindrome(str) {
       continue;
     }
 
-    if (!isEqual(firstChar, endChar)) {
+    if (firstChar !== endChar) {
       return false;
     }
 
@@ -45,4 +41,6 @@ test("isPalindrome", () => {
   expect(isPalindrome("А в Енисее - синева")).toBe(true);
   expect(isPalindrome("О, духи, от уборки микробу-то и худо")).toBe(true);
   expect(isPalindrome("Не палиндром")).toBe(false);
+  expect(isPalindrome("0P")).toBe(false);
+  expect(isPalindrome("race a car")).toBe(false);
 });

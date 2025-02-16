@@ -16,9 +16,30 @@ var reverse = function (x) {
   return Math.sign(x) * reversed;
 };
 
+// String to Integer (atoi)
+
+var atoi = function (x) {
+  const ans = Number.parseInt(x);
+  const pow = 2 ** 31;
+
+  if (ans) {
+    if (ans <= -1 * pow) return -1 * pow;
+    else if (ans >= pow - 1) return pow;
+    else return ans;
+  }
+
+  return 0;
+};
+
 test("reverse", () => {
   expect(reverse(123)).toEqual(321);
   expect(reverse(120)).toEqual(21);
   expect(reverse(500)).toEqual(5);
   expect(reverse(509)).toEqual(905);
+});
+
+test("atoi", () => {
+  expect(atoi("42")).toEqual(42);
+  expect(atoi("042")).toEqual(42);
+  expect(atoi("-042")).toEqual(-42);
 });
