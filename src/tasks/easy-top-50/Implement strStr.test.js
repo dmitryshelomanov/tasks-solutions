@@ -6,7 +6,7 @@ import { expect, test } from "vitest";
  * @param {string} haystack
  * @param {string} needle
  * @return {number}
- * #strings, #two_pointers, #siding_window
+ * #strings, #two_pointers, #sliding_window
 Given two strings needle and haystack,
 return the index of the first occurrence of needle in haystack,
 or -1 if needle is not part of haystack.

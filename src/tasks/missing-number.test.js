@@ -1,19 +1,19 @@
 import { expect, test } from "vitest";
 
 function t(nums) {
-  if (nums.length === 0) return 0;
+  const len = nums.length;
+  let total = (len * (len + 1)) / 2; // арифметическая прогрессия
 
-  let result = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    result += nums[i] - i;
+  for (const num of nums) {
+    total -= num;
   }
 
-  return nums.length - result;
+  return total;
 }
 
 test("Missing Number", () => {
   expect(t([3, 0, 1])).toEqual(2);
   expect(t([0, 1])).toEqual(2);
   expect(t([9, 6, 4, 2, 3, 5, 7, 0, 1])).toEqual(8);
+  expect(t([0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12])).toEqual(6);
 });
