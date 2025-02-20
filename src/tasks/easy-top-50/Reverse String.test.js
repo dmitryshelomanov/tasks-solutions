@@ -2,7 +2,7 @@
 import { expect, test } from "vitest";
 
 /**
- * #strings
+ * #strings, #in_place
  * @param {character[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  * 
