@@ -10,20 +10,20 @@ function uniqueSubstring(str) {
   let left = 0;
   let right = 0;
   let maxLen = 0;
-  const map = {};
+  const map = new Map();
 
   while (right < str.length) {
-    if (typeof map[str[right]] !== "undefined") {
-      const nextLeft = map[str[right]] + 1;
+    if (map.has(str[right])) {
+      const nextLeft = map.get(str[right]) + 1;
 
       for (let i = left; i < nextLeft; i++) {
-        map[str[i]] = undefined;
+        map.delete(str[i]);
       }
 
       left = nextLeft;
     }
 
-    map[str[right]] = right;
+    map.set(str[right], right);
 
     maxLen = Math.max(maxLen, right - left + 1);
     right++;

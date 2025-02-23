@@ -26,7 +26,7 @@ function findSequence(sequence, target) {
   return -1;
 }
 
-test("uniqueSubstring", () => {
+test("findSequence", () => {
   expect(findSequence([1, 2, 3], ["o", "t", 1, 200, 300])).toEqual(-1);
   expect(findSequence([1, 2, 3], ["o", "t", 1, 2, 3, 5, 6])).toEqual(2);
   expect(findSequence([1, 2, 3], ["o", "t", 1, 2, 5, 6])).toEqual(-1);

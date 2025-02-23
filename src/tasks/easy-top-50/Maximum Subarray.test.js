@@ -6,6 +6,8 @@ import { expect, test } from "vitest";
  * @param {number[]} nums
  * @return {number}
  * #dynamic, #arrays, #Kadane's Algorithm
+ *
+ * Given an integer array nums, find the subarray with the largest sum, and return its sum.
  */
 var maxSubArrayDynamic = function (nums) {
   let max = nums[0];

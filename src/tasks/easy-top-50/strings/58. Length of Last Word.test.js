@@ -17,7 +17,6 @@ var lengthOfLastWord = function (s) {
   let i = s.length - 1;
 
   while (i >= 0 && s[i] === " ") {
-    console.log("i", i);
     i--;
   }
 
@@ -30,8 +29,10 @@ var lengthOfLastWord = function (s) {
 };
 
 test("lengthOfLastWord", () => {
-  expect(lengthOfLastWord("Hello World")).toEqual(5);
   expect(lengthOfLastWord("a b c d")).toEqual(1);
+  expect(lengthOfLastWord("Hello World")).toEqual(5);
   expect(lengthOfLastWord("a b c dd")).toEqual(2);
   expect(lengthOfLastWord("   a b c dd     ")).toEqual(2);
+  expect(lengthOfLastWord("hhhhh   hh")).toEqual(2);
+  expect(lengthOfLastWord("hhhhh hh ")).toEqual(2);
 });

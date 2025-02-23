@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
 
+// #dynamic, #arrays
 function t(nums) {
   const len = nums.length;
   let total = (len * (len + 1)) / 2; // арифметическая прогрессия
