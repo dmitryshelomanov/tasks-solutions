@@ -14,28 +14,29 @@ import { expect, test } from "vitest";
  * #arrays, #hastable
  */
 var intersect = function (nums1, nums2) {
+  const rs = [];
   const map = new Map();
-  const result = [];
 
-  for (const n of nums1) {
-    map.set(n, (map.get(n) || 0) + 1);
-  }
-
-  for (const n of nums2) {
-    const count = map.get(n);
-
-    if (count) {
-      result.push(n);
-      map.set(n, count - 1);
+  for (let n of nums1) {
+    if (!map.has(n)) {
+      map.set(n, 1);
     }
   }
 
-  return result;
+  for (let n of nums2) {
+    if (map.has(n)) {
+      rs.push(n);
+      map.delete(n);
+    }
+  }
+
+  return rs;
 };
 
 test("intersect", () => {
   expect(intersect([3, 1, 2], [1, 1])).toEqual([1]);
   expect(intersect([1, 2, 2, 1], [2])).toEqual([2]);
+  expect(intersect([1, 2, 2, 1], [2, 2])).toEqual([2]);
   expect(intersect([4, 9, 5], [9, 4, 9, 8, 4])).toEqual([9, 4]);
   expect(intersect([4, 9, 5], [9, 4, 9, 8, 4])).toEqual([9, 4]);
 });

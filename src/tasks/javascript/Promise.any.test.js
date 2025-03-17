@@ -11,7 +11,7 @@ var promiseAny = function (functions) {
   return new Promise((resolve, reject) => {
     for (let i = 0; i < functions.length; i++) {
       functions[i]()
-        .then(reject)
+        .then(resolve)
         .catch((err) => {
           rejectedCounter += 1;
           errors[i] = err;

@@ -35,8 +35,7 @@ var moveZeroes = function (nums) {
     }
 
     if (nums[left] === 0) {
-      nums[left] = nums[right];
-      nums[right] = 0;
+      [nums[left], nums[right]] = [nums[right], 0];
     }
 
     right++;
@@ -61,4 +60,7 @@ test("moveZeroes", () => {
 
   const input5 = [2, 1];
   expect((moveZeroes(input5), input5)).toEqual([2, 1]);
+
+  const input6 = [2];
+  expect((moveZeroes(input6), input6)).toEqual([2]);
 });

@@ -13,8 +13,11 @@ var compactObject = function (obj) {
   const compacted = {};
 
   for (const key in obj) {
-    let value = compactObject(obj[key]);
-    if (value) compacted[key] = value;
+    const value = compactObject(obj[key]);
+
+    if (value) {
+      compacted[key] = value;
+    }
   }
 
   return compacted;
