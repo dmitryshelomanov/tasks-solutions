@@ -6,6 +6,8 @@
 
 - [Алго интервью](https://github.com/beagreatengineer/algo-interview)
 
+- [Работа браузера](https://habr.com/ru/companies/kts/articles/669784/)
+
 ## Софты
 
 - [Хабр статья](https://habr.com/ru/companies/ncloudtech/articles/653243/)
