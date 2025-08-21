@@ -21,7 +21,6 @@ var longestPalindrome = function (s) {
     right++;
   }
 
-  console.log(max);
   return s.slice(max[0], max[1]);
 };
 
@@ -40,8 +39,6 @@ function isPalindrome(str) {
 
   return true;
 }
-
-console.log(longestPalindrome("babad"));
 
 // /*
 // babad
@@ -76,17 +73,17 @@ connect((msg) => {
 render(msg)
 */
 
-function solution(connect, render) {
-  let index = 1;
-  const map = new Map();
+// function solution(connect, render) {
+//   let index = 1;
+//   const map = new Map();
 
-  connect((msg) => {
-    map.set(msg.id, msg);
+//   connect((msg) => {
+//     map.set(msg.id, msg);
 
-    while (map.has(index)) {
-      render(map.get(index));
-      map.delete(index);
-      index++;
-    }
-  });
-}
+//     while (map.has(index)) {
+//       render(map.get(index));
+//       map.delete(index);
+//       index++;
+//     }
+//   });
+// }
