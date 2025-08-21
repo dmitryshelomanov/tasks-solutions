@@ -97,7 +97,7 @@ LRUCache.prototype.get = function (key) {
 LRUCache.prototype.put = function (key, value) {
   if (this.map.has(key)) {
     const node = this.map.get(key);
-    this.tree.pop(node);
+    this.tree.remove(node);
     this.tree.add({ key, value });
     this.map.set(key, this.tree.tail);
     return;
