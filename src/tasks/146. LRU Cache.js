@@ -26,23 +26,6 @@ LinkedList.prototype.add = function (val) {
   return node;
 };
 
-LinkedList.prototype.pop = function () {
-  if (!this.head) return null;
-
-  const head = this.head;
-
-  if (this.head === this.tail) {
-    this.head = null;
-    this.tail = null;
-  } else {
-    this.head = head.next;
-    this.head.prev = null;
-  }
-
-  this.size--;
-  return head.value;
-};
-
 LinkedList.prototype.remove = function (node) {
   if (node.prev) {
     node.prev.next = node.next;
@@ -97,6 +80,7 @@ LRUCache.prototype.get = function (key) {
 LRUCache.prototype.put = function (key, value) {
   if (this.map.has(key)) {
     const node = this.map.get(key);
+
     this.tree.remove(node);
     this.tree.add({ key, value });
     this.map.set(key, this.tree.tail);
@@ -105,9 +89,11 @@ LRUCache.prototype.put = function (key, value) {
 
   if (this.tree.size >= this.capacity) {
     const oldNode = this.tree.pop();
+
     this.map.delete(oldNode.key);
   }
 
   const node = this.tree.add({ key, value });
+
   this.map.set(key, node);
 };

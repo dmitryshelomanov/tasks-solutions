@@ -60,5 +60,6 @@ test("fruit-into-baskets", () => {
   // Output: 4
   // Explanation: We can pick from trees [2,3,2,2].
   // If we had started at the first tree, we would only pick from trees [1,2].
-  expect(totalFruit([1, 2, 3, 2, 2])).toEqual(4);
+  expect(totalFruit([1, 1, 1, 1, 1, 1, 2, 3, 2, 2])).toEqual(7);
+  expect(totalFruit([3, 3, 3, 1, 2, 1, 1, 2, 3, 3, 4])).toEqual(5);
 });

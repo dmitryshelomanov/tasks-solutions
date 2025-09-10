@@ -3,10 +3,11 @@ import { expect, test } from "vitest";
 // Найти самую длинную подстроку где только 2 повторяющихся элемента (!)
 function longest(str) {
   let left = 0;
+  let right = 0;
   let maxLen = 0;
   const map = new Map();
 
-  for (let right = 0; right < str.length; right++) {
+  while (right < str.length) {
     const currChar = str[right];
 
     map.set(currChar, map.get(currChar) + 1 || 1);
@@ -24,6 +25,7 @@ function longest(str) {
     }
 
     maxLen = Math.max(maxLen, right - left + 1);
+    right++;
   }
 
   return maxLen;
