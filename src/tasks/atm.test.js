@@ -18,9 +18,7 @@ function t(sum, limits) {
     return "no money enough";
   }
 
-  while (notes.length > 0) {
-    const note = notes.shift();
-
+  for (const note of notes) {
     const availableNoteCount = limits[note];
     const moneyNeeded = Math.floor(sum / note);
     const noteCount = Math.min(moneyNeeded, availableNoteCount);
