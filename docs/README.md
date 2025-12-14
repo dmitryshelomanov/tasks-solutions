@@ -60,6 +60,14 @@
   - Деструктуризация, spread и rest операторы
   - Модули ES6, import/export и область видимости
 
+- **[ts-interview-questions.md](./ts-interview-questions.md)** - Топ-10 вопросов с собеседований по TypeScript (уровень Middle+):
+  - Union и Intersection типы
+  - Generics и условные типы
+  - Utility типы и их применение
+  - Type guards и type narrowing
+  - Модули и namespace
+  - И другие продвинутые темы TypeScript
+
 - **[package.json.md](./package.json.md)** - Основные поля package.json:
   - name, version, description, type
   - main, module, types, exports
@@ -136,7 +144,8 @@
 ### По темам
 
 - **Алгоритмы и паттерны**: [Patterns.md](./Patterns.md), [Big O.md](./Big%20O.md)
-- **JavaScript основы**: [Objects.md](./Objects.md), [Ctx-scope-vars.md](./Ctx-scope-vars.md), [Numbers.md](./Numbers.md), [package.json.md](./package.json.md)
+- **JavaScript основы**: [Objects.md](./Objects.md), [Ctx-scope-vars.md](./Ctx-scope-vars.md), [Numbers.md](./Numbers.md), [js-interview-questions.md](./js-interview-questions.md), [package.json.md](./package.json.md)
+- **TypeScript**: [ts-interview-questions.md](./ts-interview-questions.md)
 - **Асинхронность**: [event-loop.md](./event-loop.md)
 - **React**: [react-hooks.md](./react-hooks.md)
 - **Структуры данных**: [structs.md](./structs.md), [array-vs-vectors.md](./array-vs-vectors.md)
@@ -146,8 +155,8 @@
 ### По уровням сложности
 
 - **Начальный**: Objects.md, Numbers.md, structs.md, package.json.md
-- **Средний**: Ctx-scope-vars.md, event-loop.md, cors.md, class-methods.md
-- **Продвинутый**: Patterns.md, Big O.md, __proto__.md, react-hooks.md
+- **Средний**: Ctx-scope-vars.md, event-loop.md, cors.md, class-methods.md, js-interview-questions.md
+- **Продвинутый**: Patterns.md, Big O.md, __proto__.md, react-hooks.md, ts-interview-questions.md
 
 ## Как использовать эту документацию
 
