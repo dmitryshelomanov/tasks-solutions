@@ -253,5 +253,5 @@ console.log(obj.hasOwnProperty('toString')); // false (наследуется)
 
 ---
 
-*Для понимания прототипного наследования см. [__proto__.md](./__proto__.md)*
+*Для понимания прототипного наследования см. [prototypes.md](./prototypes.md)*
 *Для работы с классами см. [class-methods.md](./class-methods.md)*

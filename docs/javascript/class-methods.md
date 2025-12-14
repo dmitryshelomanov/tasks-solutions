@@ -315,5 +315,5 @@ Object.getPrototypeOf(obj) === MyClass.prototype; // true
 
 ---
 
-*Для понимания прототипного наследования см. [__proto__.md](./__proto__.md)*
-*Для изучения контекста выполнения см. [Ctx-scope-vars.md](./Ctx-scope-vars.md)*
+*Для понимания прототипного наследования см. [prototypes.md](./prototypes.md)*
+*Для изучения контекста выполнения см. [context-scope-variables.md](./context-scope-variables.md)*

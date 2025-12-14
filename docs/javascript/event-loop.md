@@ -164,4 +164,4 @@ Promise.resolve('success')
 
 ---
 
-*Для понимания контекста и области видимости см. [Ctx-scope-vars.md](./Ctx-scope-vars.md)*
+*Для понимания контекста и области видимости см. [context-scope-variables.md](./context-scope-variables.md)*

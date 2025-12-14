@@ -252,4 +252,4 @@ console.log(addLargeBinary('1111111111111111', '1'));
 
 ---
 
-*Для понимания работы с объектами см. [Objects.md](./Objects.md)*
+*Для понимания работы с объектами см. [objects.md](./objects.md)*
