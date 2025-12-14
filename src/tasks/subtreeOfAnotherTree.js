@@ -1,7 +1,22 @@
+// https://leetcode.com/problems/subtree-of-another-tree/description/
+
 /**
- * @param {TreeNode} root
- * @param {TreeNode} subRoot
- * @return {boolean}
+ * Проверить, является ли subRoot поддеревом root
+ * 
+ * Задача: Определить, есть ли в дереве root поддерево, идентичное subRoot.
+ * Поддерево означает, что узел и все его потомки должны совпадать с subRoot.
+ * 
+ * Подход:
+ * 1. Рекурсивно обходим все узлы дерева root (DFS)
+ * 2. Для каждого узла проверяем, идентично ли поддерево начиная с этого узла subRoot
+ * 3. Используем вспомогательную функцию isSameTree для проверки идентичности деревьев
+ * 
+ * Паттерны: #tree, #dfs, #recursion
+ * Сложность: O(m * n), где m - количество узлов в root, n - количество узлов в subRoot
+ * 
+ * @param {TreeNode} root - Корневой узел основного дерева
+ * @param {TreeNode} subRoot - Корневой узел поддерева для поиска
+ * @return {boolean} true, если subRoot является поддеревом root, иначе false
  */
 var isSubtree = function (root, subRoot) {
   if (!root) return !subRoot;
@@ -14,9 +29,10 @@ var isSubtree = function (root, subRoot) {
 };
 
 /**
- * @param {TreeNode} p
- * @param {TreeNode} q
- * @return {boolean}
+ * Проверяет, идентичны ли два дерева
+ * @param {TreeNode} root - Корневой узел первого дерева
+ * @param {TreeNode} subRoot - Корневой узел второго дерева
+ * @return {boolean} true, если деревья идентичны, иначе false
  */
 function isSameTree(root, subRoot) {
   if (!root && !subRoot) return true;
@@ -28,8 +44,3 @@ function isSameTree(root, subRoot) {
   );
 }
 
-// Решение
-// 1) Обойти все узлы дерева root.
-// 2) Для каждого узла, у которого значение совпадает с subRoot.val, проверить, идентичны ли поддеревья.
-// 3) Если хотя бы одно поддерево идентично — вернуть true.
-// 4) Если ни одно не подошло — вернуть false.

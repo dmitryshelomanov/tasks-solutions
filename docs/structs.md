@@ -1,5 +1,11 @@
-https://practicum.yandex.ru/blog/10-osnovnyh-struktur-dannyh/
-https://habr.com/ru/articles/422259/
+# Основные структуры данных
+
+## Полезные ссылки
+
+- [10 основных структур данных](https://practicum.yandex.ru/blog/10-osnovnyh-struktur-dannyh/)
+- [Статья на Habr о структурах данных](https://habr.com/ru/articles/422259/)
+
+## Обзор структур данных
 
 **Array**
 

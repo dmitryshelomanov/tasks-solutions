@@ -1,7 +1,22 @@
+// https://leetcode.com/problems/insert-interval/description/
+
 /**
- * @param {number[][]} intervals
- * @param {number[]} newInterval
- * @return {number[][]}
+ * Вставить новый интервал в список непересекающихся интервалов
+ * 
+ * Задача: Вставить newInterval в intervals так, чтобы intervals оставались отсортированными
+ * и непересекающимися. Если newInterval пересекается с существующими интервалами, объединить их.
+ * 
+ * Подход:
+ * 1. Находим позицию для вставки newInterval
+ * 2. Вставляем newInterval в правильную позицию
+ * 3. Объединяем пересекающиеся интервалы с помощью функции merge
+ * 
+ * Паттерны: #intervals, #merge_intervals, #arrays
+ * Сложность: O(n)
+ * 
+ * @param {number[][]} intervals - Массив непересекающихся интервалов [start, end]
+ * @param {number[]} newInterval - Новый интервал [start, end]
+ * @return {number[][]} Массив интервалов после вставки и объединения
  */
 var insert = function (intervals, newInterval) {
   const result = [];
@@ -24,8 +39,9 @@ var insert = function (intervals, newInterval) {
 };
 
 /**
- * @param {number[][]} intervals
- * @return {number[][]}
+ * Объединяет пересекающиеся интервалы
+ * @param {number[][]} intervals - Массив интервалов [start, end]
+ * @return {number[][]} Массив объединённых непересекающихся интервалов
  */
 function merge(intervals) {
   const result = [];
@@ -47,27 +63,3 @@ function merge(intervals) {
   return result;
 }
 
-console.log(
-  insert(
-    [
-      [1, 3],
-      [6, 9],
-    ],
-    [2, 5]
-  )
-);
-
-console.log(insert([], [5, 7]));
-
-console.log(
-  insert(
-    [
-      [1, 3],
-      [2, 5],
-      [6, 9],
-    ],
-    []
-  )
-);
-
-console.log(insert([[1, 5]], [2, 7]));

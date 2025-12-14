@@ -1,9 +1,25 @@
+// https://leetcode.com/problems/merge-sorted-array/description/
+
 /**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
+ * Объединить два отсортированных массива
+ * 
+ * Задача: Объединить nums2 в nums1 как один отсортированный массив.
+ * nums1 имеет длину m + n, где m - количество элементов nums1, а n - количество элементов nums2.
+ * nums1 имеет размер, достаточный для размещения всех элементов из nums2.
+ * 
+ * Подход:
+ * Используется метод двух указателей, начиная с конца массивов.
+ * Сравниваем элементы с конца и заполняем nums1 справа налево.
+ * Это позволяет не использовать дополнительную память.
+ * 
+ * Паттерны: #arrays, #two_pointers, #merge, #in_place
+ * Сложность: O(m + n)
+ * 
+ * @param {number[]} nums1 - Первый отсортированный массив (длина m + n, первые m элементов значимы)
+ * @param {number} m - Количество элементов в nums1
+ * @param {number[]} nums2 - Второй отсортированный массив
+ * @param {number} n - Количество элементов в nums2
+ * @return {void} Не возвращает значение, модифицирует nums1 на месте
  */
 var merge = function (nums1, m, nums2, n) {
   let left = m - 1;
@@ -28,22 +44,3 @@ var merge = function (nums1, m, nums2, n) {
   }
 };
 
-const arr = [4, 5, 6, 0, 0, 0];
-
-merge(arr, 3, [1, 2, 3], 3);
-
-console.log(arr);
-
-/*
-
-[1, 2, 3, 0, 0, 0] - [2, 5, 6]
-
-[1, 2, 3, 0, 0, 6] - [2, 5, 6]
-
-[1, 2, 3, 0, 5, 6] - [2, 5, 6]
-
-[1, 2, 3, 3, 5, 6] - [2, 5, 6]
-
-[1, 2, 2, 3, 5, 6] - [2, 5, 6]
-
-*/

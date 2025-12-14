@@ -1,3 +1,9 @@
+# React Hooks
+
+Коллекция полезных хуков React для различных задач оптимизации и работы с асинхронными операциями.
+
+## useDeferredValue
+
 **useDeferredValue** - это хук React, который позволяет отложить обновление части пользовательского интерфейса.
 
 - Функция useDeferredValue сама по себе не предотвращает дополнительные сетевые запросы.
@@ -8,21 +14,21 @@
 
 **useImperativeHandle** - это хук React, который позволяет вам настроить хэндл-обработчик, отображаемый как ссылка. По сути это прокси для компонента который внутри уже использует свой ref
 
-```
-    useImperativeHandle(
-        ref,
-        () => {
-            return {
-                focus() {
-                    inputRef.current.focus();
-                },
-                scrollIntoView() {
-                    inputRef.current.scrollIntoView();
-                },
-            };
-        },
-        []
-    );
+```js
+useImperativeHandle(
+    ref,
+    () => {
+        return {
+            focus() {
+                inputRef.current.focus();
+            },
+            scrollIntoView() {
+                inputRef.current.scrollIntoView();
+            },
+        };
+    },
+    []
+);
 ```
 
 **useInsertionEffect** - это версия useEffect, которая срабатывает перед любыми мутациями DOM.
@@ -36,12 +42,11 @@ useInsertionEffect предназначен для авторов библиот
 Функция subscribe должна подписываться на стор и возвращать функцию, которая отписывается.
 Функция getSnapshot должна считывать моментальный снимок данных из хранилища.
 
-```
-   const isOnline = useSyncExternalStore(
-        subscribe,
-        getSnapshot
-    );
-
+```js
+const isOnline = useSyncExternalStore(
+    subscribe,
+    getSnapshot
+);
 
 function getSnapshot() {
     return navigator.onLine;

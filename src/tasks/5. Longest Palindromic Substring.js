@@ -1,89 +1,59 @@
+// https://leetcode.com/problems/longest-palindromic-substring/description/
+
 /**
- * @param {string} s
- * @return {string}
+ * Найти самую длинную палиндромную подстроку
+ * 
+ * Задача: Найти самую длинную подстроку-палиндром в строке s.
+ * 
+ * Подход "расширение от центра":
+ * Для каждой возможной позиции (как для нечётной, так и для чётной длины палиндрома)
+ * расширяем границы влево и вправо, пока символы совпадают.
+ * Отслеживаем самую длинную найденную подстроку.
+ * 
+ * Паттерны: #strings, #two_pointers, #expand_around_center
+ * Сложность: O(n^2) в худшем случае
+ * 
+ * @param {string} s - Входная строка
+ * @return {string} Самая длинная палиндромная подстрока
  */
 var longestPalindrome = function (s) {
-  let left = 0;
-  let right = 0;
-  let max = [0, 0];
+  if (s.length < 1) return "";
+  if (s.length === 1) return s;
 
-  if (s.length === 1) {
-    return s;
-  }
+  let start = 0;
+  let maxLen = 1;
 
-  while (right < s.length) {
-    if (isPalindrome(s.slice(left, right))) {
-      max = right - left > max[1] - max[0] ? [left, right] : max;
-    } else {
-      left++;
+  /**
+   * Расширяет границы палиндрома от центра влево и вправо
+   * @param {number} left - Левая граница
+   * @param {number} right - Правая граница
+   * @returns {number} Длина найденного палиндрома
+   */
+  function expandAroundCenter(left, right) {
+    while (left >= 0 && right < s.length && s[left] === s[right]) {
+      left--;
+      right++;
     }
-
-    right++;
+    return right - left - 1;
   }
 
-  return s.slice(max[0], max[1]);
+  for (let i = 0; i < s.length; i++) {
+    // Проверяем палиндромы нечётной длины (центр в позиции i)
+    const len1 = expandAroundCenter(i, i);
+    
+    // Проверяем палиндромы чётной длины (центр между i и i+1)
+    const len2 = expandAroundCenter(i, i + 1);
+    
+    // Выбираем максимальную длину
+    const len = Math.max(len1, len2);
+    
+    // Если нашли более длинный палиндром, обновляем start и maxLen
+    if (len > maxLen) {
+      maxLen = len;
+      start = i - Math.floor((len - 1) / 2);
+    }
+  }
+
+  return s.slice(start, start + maxLen);
 };
 
-function isPalindrome(str) {
-  let start = 0;
-  let end = str.length - 1;
-
-  while (start < end) {
-    if (str[start] !== str[end]) {
-      return false;
-    }
-
-    start += 1;
-    end -= 1;
-  }
-
-  return true;
-}
-
-// /*
-// babad
-// bab
-// */
-
-/*
-Наше приложение-чат должно отображать новые сообщения, которые приходят с сервера, как можно быстрее.
-
-Сообщение имеет формат:
-
-interface Message {
-    id: number
-    text: string
-}
-
-Id самого первого сообщения = 1, а id каждого следующего сообщения на 1 больше, чем id предыдущего.
-Нам нужно выводить сообщения в правильном порядке, однако сервер не гарантирует правильный порядок
-сообщений, отправляемых в наше приложение.
-
-Таймлайн:
-// (приходит) 7 1 2 3 6 5 4       8
-// (рисуем)   . 1 2 3 . . 4 5 6 7 8
-
-Сообщения от сервера приходят в обработчик функции connect:
-
-connect((msg) => {
-    ...
-});
-
-Отображать сообщения нужно с помощью функции render:
-render(msg)
-*/
-
-// function solution(connect, render) {
-//   let index = 1;
-//   const map = new Map();
-
-//   connect((msg) => {
-//     map.set(msg.id, msg);
-
-//     while (map.has(index)) {
-//       render(map.get(index));
-//       map.delete(index);
-//       index++;
-//     }
-//   });
-// }
