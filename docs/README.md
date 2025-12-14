@@ -78,6 +78,15 @@
   - Настройка CORS на сервере
   - Обход CORS для тестирования
 
+- **[csp.md](./csp.md)** - Content Security Policy (CSP):
+  - Что такое CSP и как работает
+  - Директивы и ключевые слова
+  - Примеры политик безопасности
+  - Защита от XSS атак
+  - Nonces и hashes для inline-скриптов
+  - Отчёты о нарушениях
+  - Рекомендации по использованию
+
 - **[class-methods.md](./class-methods.md)** - Методы классов в JavaScript:
   - Стрелочные функции vs обычные функции
   - Наследование в классах
@@ -115,7 +124,7 @@
 - **Асинхронность**: [event-loop.md](./event-loop.md)
 - **React**: [react-hooks.md](./react-hooks.md)
 - **Структуры данных**: [structs.md](./structs.md), [array-vs-vectors.md](./array-vs-vectors.md)
-- **Веб**: [cors.md](./cors.md), [class-methods.md](./class-methods.md), [__proto__.md](./__proto__.md)
+- **Веб**: [cors.md](./cors.md), [csp.md](./csp.md), [class-methods.md](./class-methods.md), [__proto__.md](./__proto__.md)
 - **Искусственный интеллект**: [AI/README.md](./AI/README.md)
 
 ### По уровням сложности
@@ -129,7 +138,7 @@
 1. **Для изучения алгоритмов**: начните с [Patterns.md](./Patterns.md) и [Big O.md](./Big%20O.md)
 2. **Для понимания JavaScript**: изучите [Ctx-scope-vars.md](./Ctx-scope-vars.md) и [Objects.md](./Objects.md)
 3. **Для работы со структурами данных**: обратитесь к [structs.md](./structs.md)
-4. **Для веб-разработки**: посмотрите [cors.md](./cors.md) и [class-methods.md](./class-methods.md)
+4. **Для веб-разработки**: посмотрите [cors.md](./cors.md), [csp.md](./csp.md) и [class-methods.md](./class-methods.md)
 5. **Для изучения AI**: начните с [AI/README.md](./AI/README.md) — там описаны эмбеддинги, LLM и MCP
 
 ---

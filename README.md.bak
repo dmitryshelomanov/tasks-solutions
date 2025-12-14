@@ -91,7 +91,6 @@ tasks-solutions/
 
 #### 🌐 Веб-разработка
 - **[CORS](./docs/cors.md)** — Cross-Origin Resource Sharing
-- **[CSP](./docs/csp.md)** — Content Security Policy
 - **[Методы классов](./docs/class-methods.md)** — наследование и контекст
 - **[Прототипы](./docs/__proto__.md)** — прототипное наследование
 
