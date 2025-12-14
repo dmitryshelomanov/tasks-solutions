@@ -1,6 +1,12 @@
-import { expect, test } from "vitest";
+/**
+ * Найти самую длинную подстроку с не более чем k различными символами
+ *
+ * Задача: Найти длину самой длинной подстроки, содержащей не более k различных символов.
+ *
+ * Паттерны: #strings, #sliding_window, #hashtable
+ */
 
-// Найти самую длинную подстроку где только k повторяющихся элемента (!)
+import { expect, test } from "vitest";
 function longest(str, k) {
   let left = 0;
   let right = 0;

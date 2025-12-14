@@ -1,14 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/566/
 
-import { expect, test } from "vitest";
-
 /**
- * @param {number[]} nums
- * @return {number}
- * #dynamic, #arrays, #Kadane's Algorithm
+ * Найти подмассив с максимальной суммой
  *
- * Given an integer array nums, find the subarray with the largest sum, and return its sum.
+ * Задача: Найти подмассив с наибольшей суммой и вернуть эту сумму.
+ *
+ * Паттерны: #arrays, #dynamic
  */
+
+import { expect, test } from "vitest";
 var maxSubArrayDynamic = function (nums) {
   let max = nums[0];
   let curr = nums[0];

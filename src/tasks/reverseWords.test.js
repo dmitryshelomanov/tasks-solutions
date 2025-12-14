@@ -1,6 +1,9 @@
 /**
- * @param {string} s
- * @return {string}
+ * Развернуть порядок слов в строке
+ *
+ * Задача: Развернуть порядок слов в строке. Слова разделены одним или несколькими пробелами.
+ *
+ * Паттерны: #strings, #two_pointers, #in_place
  */
 
 import { expect, test } from "vitest";

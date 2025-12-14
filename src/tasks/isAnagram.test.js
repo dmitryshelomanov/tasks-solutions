@@ -1,6 +1,13 @@
-import { expect, test } from "vitest";
+/**
+ * Проверить, являются ли строки анаграммами
+ *
+ * Задача: Проверить, являются ли две строки анаграммами друг друга
+ * (содержат одинаковые символы в одинаковом количестве).
+ *
+ * Паттерны: #strings, #hashtable
+ */
 
-// #hastable
+import { expect, test } from "vitest";
 
 function isAnagram(a = "", b = "") {
   if (a.length != b.length) {

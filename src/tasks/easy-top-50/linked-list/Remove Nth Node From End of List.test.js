@@ -1,9 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/
 
-import { expect, test } from "vitest";
-
 /**
-Given the head of a linked list, remove the nth node from the end of the list and return its head.
+ * Удалить n-й узел с конца списка
+ *
+ * Задача: Удалить n-й узел с конца односвязного списка и вернуть голову списка.
+ *
+ * Паттерны: #linked_list, #two_pointers
+ */
+
+import { expect, test } from "vitest";
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {

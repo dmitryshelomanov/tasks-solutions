@@ -1,26 +1,15 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/
-import { expect, test } from "vitest";
 
 /**
- * @param {number[][]} matrix
- * @return {void} Do not return anything, modify matrix in-place instead.
- * You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
-
-You have to rotate the image in-place, which means you have to modify the input 2D matrix directly.
-DO NOT allocate another 2D matrix and do the rotation.
- * #arrays, #matrix
-
-
-Обьяснение
-
-To rotate a matrix by 90 degrees clockwise in-place (without allocating additional 2D memory),
-you can achieve this by performing two steps:
-
-Transpose the Matrix : Swap the rows with columns.
-Reverse Each Row : Reverse the elements of each row.
-This approach ensures that the rotation is done in-place,
-modifying the original matrix without using extra space for another 2D array.
+ * Повернуть изображение на 90 градусов по часовой стрелке
+ *
+ * Задача: Повернуть матрицу n x n на 90 градусов по часовой стрелке на месте.
+ *
+ * Паттерны: #arrays, #matrix, #in_place
  */
+
+import { expect, test } from "vitest";
+
 var rotate = function (matrix) {
   const n = matrix.length;
 

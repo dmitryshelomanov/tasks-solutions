@@ -1,15 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/887/
 
-import { expect, test } from "vitest";
-
 /**
- * @param {string[]} strs
- * @return {string}
- * 
- * Write a function to find the longest common prefix string amongst an array of strings.
-If there is no common prefix, return an empty string "".
-#strings
+ * Найти самый длинный общий префикс
+ *
+ * Задача: Найти самый длинный общий префикс среди массива строк. Если общего префикса нет, вернуть пустую строку.
+ *
+ * Паттерны: #strings
  */
+
+import { expect, test } from "vitest";
 var longestCommonPrefix = function (strs) {
   const first = strs[0];
   let prefix = "";

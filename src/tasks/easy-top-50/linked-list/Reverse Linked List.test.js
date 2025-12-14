@@ -1,10 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/560/
 
-import { expect, test } from "vitest";
-
 /**
-Given the head of a singly linked list, reverse the list, and return the reversed list.
+ * Развернуть связный список
+ *
+ * Задача: Развернуть односвязный список и вернуть развёрнутый список.
+ *
+ * Паттерны: #linked_list, #two_pointers
  */
+
+import { expect, test } from "vitest";
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {

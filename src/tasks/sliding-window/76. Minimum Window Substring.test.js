@@ -1,16 +1,12 @@
-import { expect, test } from "vitest";
-
 /**
- * @param {string} s
- * @param {string} t
- * @return {string}
- * 
- * Given two strings s and t of lengths m and n respectively, return the minimum window 
-substring
- of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
-
-The testcases will be generated such that the answer is unique.
+ * Найти минимальное окно подстроки
+ *
+ * Задача: Найти минимальную подстроку в s, которая содержит все символы из t (включая дубликаты).
+ *
+ * Паттерны: #strings, #sliding_window, #hashtable
  */
+
+import { expect, test } from "vitest";
 var minWindow = function (s, t) {
   if (t.length > s.length) {
     return ""; // Если длина t больше длины s, сразу возвращаем пустую строку

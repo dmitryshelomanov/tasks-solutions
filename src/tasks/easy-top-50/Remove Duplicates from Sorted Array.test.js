@@ -1,6 +1,13 @@
 // https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/727/
-// #in_place, #arrays
-// Two pointers
+
+/**
+ * Удалить дубликаты из отсортированного массива
+ *
+ * Задача: Удалить дубликаты из отсортированного массива на месте и вернуть количество уникальных элементов.
+ *
+ * Паттерны: #arrays, #in_place, #two_pointers
+ */
+
 import { expect, test } from "vitest";
 
 var removeDuplicates = function (nums = []) {

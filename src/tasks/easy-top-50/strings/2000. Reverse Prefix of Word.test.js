@@ -1,11 +1,14 @@
 // https://leetcode.com/problems/reverse-prefix-of-word/description/?envType=problem-list-v2&envId=string&
-import { expect, test } from "vitest";
 
 /**
- * @param {string} word
- * @param {character} ch
- * @return {string}
+ * Развернуть префикс слова до указанного символа
+ *
+ * Задача: Развернуть префикс слова до первого вхождения символа ch (включительно).
+ *
+ * Паттерны: #strings
  */
+
+import { expect, test } from "vitest";
 var reversePrefix = function (word, ch) {
   let reversedPrefix = "";
 

@@ -1,15 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/
-import { expect, test } from "vitest";
 
 /**
- * 
-Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
-You must implement a solution with a linear runtime complexity and use only constant extra space.
- * @param {number[]} nums
- * @return {boolean}
+ * Найти единственное число, которое встречается один раз
  *
- * #arrays, #hastable
+ * Задача: В непустом массиве каждое число встречается дважды, кроме одного. Найти это единственное число.
+ *
+ * Паттерны: #arrays, #hashtable
  */
+
+import { expect, test } from "vitest";
 /**
  * @param {number[]} nums
  * @return {number}

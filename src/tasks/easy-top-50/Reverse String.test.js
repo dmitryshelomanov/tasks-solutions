@@ -1,14 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/
-import { expect, test } from "vitest";
 
 /**
- * #strings, #in_place
- * @param {character[]} s
- * @return {void} Do not return anything, modify s in-place instead.
- * 
- * Write a function that reverses a string. The input string is given as an array of characters s.
-You must do this by modifying the input array in-place with O(1) extra memory.
+ * Развернуть строку
+ *
+ * Задача: Развернуть строку, представленную массивом символов, на месте с O(1) дополнительной памяти.
+ *
+ * Паттерны: #strings, #in_place, #two_pointers
  */
+
+import { expect, test } from "vitest";
 var reverseString = function (s) {
   let left = 0;
   let right = s.length - 1;

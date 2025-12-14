@@ -1,30 +1,16 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/
-import { expect, test } from "vitest";
 
 /**
- * @param {number[]} nums
- * @return {void} Do not return anything, modify nums in-place instead.
-Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
-Note that you must do this in-place without making a copy of the array.
-
-#arrays, #in_place, #two_pointers
-
- ↓
-[0, 1, 0, 3, 12]
- ↑
-
-    ↓
-[1, 0, 0, 3, 12]
-          ↑
-
-    ↓
-[1, 3, 0, 0, 12]
-          ↑
-
-       ↓
-[1, 3, 0, 0, 12]
-              ↑
+ * Переместить все нули в конец массива
+ *
+ * Задача: Переместить все нули в конец массива, сохраняя относительный порядок ненулевых элементов.
+ * Модификация должна быть выполнена на месте без создания копии массива.
+ *
+ * Паттерны: #arrays, #in_place, #two_pointers
  */
+
+import { expect, test } from "vitest";
+
 var moveZeroes = function (nums) {
   let left = 0;
   let right = 1;

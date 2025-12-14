@@ -1,11 +1,12 @@
-import { expect, test } from "vitest";
+/**
+ * Найти длину самой длинной подстроки без повторяющихся символов
+ *
+ * Задача: Найти длину самой длинной подстроки без повторяющихся символов в строке.
+ *
+ * Паттерны: #strings, #sliding_window, #hashtable
+ */
 
-/*
-Дана строка, найдите длину самой длинной подстроки без
-повторяющихся символов.
-abcabcbb
-Выход: З Сответ "abc" - длина 3)|
-*/
+import { expect, test } from "vitest";
 function uniqueSubstring(str) {
   let left = 0;
   let right = 0;

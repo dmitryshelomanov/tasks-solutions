@@ -1,22 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/885/
 
-import { expect, test } from "vitest";
-
 /**
- * @param {string} haystack
- * @param {string} needle
- * @return {number}
- * #strings, #two_pointers, #sliding_window
-Given two strings needle and haystack,
-return the index of the first occurrence of needle in haystack,
-or -1 if needle is not part of haystack.
-
-Approach
-Use two pointers: start for haystack and end for needle.
-Slide the window: On mismatch, adjust start to the
-next position after the first matched character, and reset end.
-Return match index: When end reaches the end of needle, a full match is found.
+ * Найти первое вхождение подстроки
+ *
+ * Задача: Найти индекс первого вхождения строки needle в строку haystack, или -1, если needle не является частью haystack.
+ *
+ * Паттерны: #strings, #two_pointers, #sliding_window
  */
+
+import { expect, test } from "vitest";
 
 var strStr = function (haystack, needle) {
   if (needle.length === 0) return 0; // Edge case: empty needle

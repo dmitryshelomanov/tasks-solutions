@@ -1,17 +1,14 @@
 // https://leetcode.com/problems/length-of-last-word/description/?envType=problem-list-v2&envId=string&
-import { expect, test } from "vitest";
 
 /**
- * @param {string} s
- * @return {number}
- * 
- * Given a string s consisting of words and spaces, return the length of the last word in the string.
-A word is a maximal 
-substring
- consisting of non-space characters only.
-
- #string
+ * Найти длину последнего слова
+ *
+ * Задача: Вернуть длину последнего слова в строке. Слово - это максимальная подстрока без пробелов.
+ *
+ * Паттерны: #strings
  */
+
+import { expect, test } from "vitest";
 var lengthOfLastWord = function (s) {
   let count = 0;
   let i = s.length - 1;

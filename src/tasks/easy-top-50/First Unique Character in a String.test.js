@@ -1,14 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/
 
-import { expect, test } from "vitest";
-
 /**
- * @param {string} s
- * @return {number}
- * #strings, #hashtable
- * Given a string s, find the first non-repeating character in
- * it and return its index. If it does not exist, return -1.
+ * Найти первый неповторяющийся символ
+ *
+ * Задача: Найти первый неповторяющийся символ в строке и вернуть его индекс. Если такого нет, вернуть -1.
+ *
+ * Паттерны: #strings, #hashtable
  */
+
+import { expect, test } from "vitest";
 var firstUniqChar = function (s) {
   const map = new Map();
 

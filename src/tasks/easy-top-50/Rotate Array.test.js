@@ -1,17 +1,14 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/
-import { expect, test } from "vitest";
 
 /**
- * @param {number[]} nums
- * @param {number} k
- * @return {void} Do not return anything, modify nums in-place instead.
+ * Повернуть массив вправо на k шагов
  *
- * Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
- * #in_place, #arrays
- * Полезный хак когда нужно менять все по кругу
- * (i + k) % nums.length
- * где % это remainder operator (x - Math.floor(x/y) * y)
+ * Задача: Повернуть массив вправо на k шагов на месте.
+ *
+ * Паттерны: #arrays, #in_place
  */
+
+import { expect, test } from "vitest";
 var rotate = function (nums, k) {
   const result = Array.from({ length: nums.length });
 

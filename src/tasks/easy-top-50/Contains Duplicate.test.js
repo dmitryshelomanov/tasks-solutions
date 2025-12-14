@@ -1,15 +1,15 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/
-import { expect, test } from "vitest";
 
 /**
- * Given an integer array nums, return true if any value appears
- * at least twice in the array, and return false
- * if every element is distinct.
- * @param {number[]} nums
- * @return {boolean}
+ * Проверить наличие дубликатов в массиве
  *
- * #naive, #arrays
+ * Задача: Вернуть true, если в массиве есть хотя бы одно значение, которое встречается дважды,
+ * и false, если все элементы различны.
+ *
+ * Паттерны: #arrays, #hashtable
  */
+
+import { expect, test } from "vitest";
 var containsDuplicate = function (nums = []) {
   const map = {};
 

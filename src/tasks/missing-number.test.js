@@ -1,6 +1,12 @@
-import { expect, test } from "vitest";
+/**
+ * Найти пропущенное число
+ *
+ * Задача: В массиве из n чисел от 0 до n отсутствует одно число. Найти это число.
+ *
+ * Паттерны: #arrays
+ */
 
-// #dynamic, #arrays
+import { expect, test } from "vitest";
 function t(nums) {
   const len = nums.length;
   let total = (len * (len + 1)) / 2; // арифметическая прогрессия

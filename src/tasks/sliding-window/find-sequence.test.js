@@ -1,3 +1,11 @@
+/**
+ * Найти последовательность в массиве
+ *
+ * Задача: Найти индекс первого вхождения последовательности sequence в массиве target.
+ *
+ * Паттерны: #arrays, #naive
+ */
+
 import { expect, test } from "vitest";
 
 function findSequence(sequence, target) {

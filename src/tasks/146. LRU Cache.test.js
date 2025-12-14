@@ -1,20 +1,46 @@
 // https://leetcode.com/problems/lru-cache/description/
 
+/**
+ * LRU Cache (Least Recently Used Cache)
+ *
+ * Задача: Реализовать структуру данных LRU Cache, которая поддерживает операции get и put.
+ * LRU (Least Recently Used) - алгоритм кэширования, при котором удаляется наименее используемый элемент.
+ *
+ * Подход:
+ * Используется комбинация двунаправленного связанного списка и хеш-таблицы (Map):
+ * - Связанный список хранит элементы в порядке использования (head - самый старый, tail - самый новый)
+ * - Map обеспечивает O(1) доступ к узлам по ключу
+ *
+ * Паттерны: #hashtable, #linked_list
+ * Сложность: get и put - O(1)
+ */
+
 import { expect, test } from "vitest";
 
-// Копируем реализацию из исходного файла для тестирования
+/**
+ * Узел двунаправленного связанного списка
+ * @param {*} val - Значение узла
+ */
 function Node(val) {
   this.value = val;
   this.next = null;
   this.prev = null;
 }
 
+/**
+ * Двунаправленный связанный список для хранения элементов кэша
+ */
 function LinkedList() {
   this.head = null;
   this.tail = null;
   this.size = 0;
 }
 
+/**
+ * Добавляет элемент в конец списка (как самый новый)
+ * @param {*} val - Значение для добавления
+ * @returns {Node} Добавленный узел
+ */
 LinkedList.prototype.add = function (val) {
   const node = new Node(val);
 
@@ -31,6 +57,10 @@ LinkedList.prototype.add = function (val) {
   return node;
 };
 
+/**
+ * Удаляет узел из списка
+ * @param {Node} node - Узел для удаления
+ */
 LinkedList.prototype.remove = function (node) {
   if (node.prev) {
     node.prev.next = node.next;
@@ -47,6 +77,10 @@ LinkedList.prototype.remove = function (node) {
   this.size--;
 };
 
+/**
+ * Удаляет и возвращает первый элемент списка (самый старый)
+ * @returns {*} Значение удалённого узла или null, если список пуст
+ */
 LinkedList.prototype.pop = function () {
   if (!this.head) return null;
 
@@ -64,17 +98,29 @@ LinkedList.prototype.pop = function () {
   return head.value;
 };
 
+/**
+ * LRU Cache конструктор
+ * @param {number} capacity - Максимальная ёмкость кэша
+ */
 var LRUCache = function (capacity) {
   this.capacity = capacity;
   this.tree = new LinkedList();
   this.map = new Map();
 };
 
+/**
+ * Получает значение по ключу и перемещает элемент в конец (как самый используемый)
+ * @param {number} key - Ключ
+ * @returns {number} Значение или -1, если ключ не найден
+ */
 LRUCache.prototype.get = function (key) {
+  // Если ключа нет в кэше, возвращаем -1
   if (!this.map.has(key)) return -1;
 
   const node = this.map.get(key);
 
+  // Перемещаем узел в конец списка (как самый новый)
+  // Это нужно для поддержания порядка использования (LRU)
   this.tree.remove(node);
   const newNode = this.tree.add(node.value);
   this.map.set(key, newNode);
@@ -82,7 +128,14 @@ LRUCache.prototype.get = function (key) {
   return node.value.value;
 };
 
+/**
+ * Добавляет или обновляет значение по ключу
+ * @param {number} key - Ключ
+ * @param {number} value - Значение
+ */
 LRUCache.prototype.put = function (key, value) {
+  // Если ключ уже существует, обновляем значение и перемещаем в конец
+  // (делаем его самым используемым)
   if (this.map.has(key)) {
     const node = this.map.get(key);
 
@@ -92,12 +145,15 @@ LRUCache.prototype.put = function (key, value) {
     return;
   }
 
+  // Если достигли максимальной ёмкости, удаляем самый старый элемент (head)
+  // Это реализация алгоритма LRU - удаляем наименее используемый элемент
   if (this.tree.size >= this.capacity) {
     const oldNode = this.tree.pop();
 
     this.map.delete(oldNode.key);
   }
 
+  // Добавляем новый элемент в конец списка (как самый новый)
   const node = this.tree.add({ key, value });
 
   this.map.set(key, node);
@@ -138,4 +194,3 @@ test("LRU Cache - ёмкость 1", () => {
   expect(lru.get(1)).toBe(-1);
   expect(lru.get(2)).toBe(2);
 });
-

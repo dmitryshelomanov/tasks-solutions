@@ -1,16 +1,15 @@
 // https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
 
-import { expect, test } from "vitest";
-
 /**
- * @param {string} s
- * @return {number}
- * 
- * A string is good if there are no repeated characters.
-Given a string return the number of good substrings of length three i
-Note that if there are multiple occurrences of the same substring, every occurrence should be counted.
-A substring is a contiguous sequence of characters in a string.
+ * Подсчитать количество "хороших" подстрок длины 3
+ *
+ * Задача: Подсчитать количество подстрок длины 3 без повторяющихся символов.
+ * Подстрока считается "хорошей", если все её символы различны.
+ *
+ * Паттерны: #strings, #sliding_window
  */
+
+import { expect, test } from "vitest";
 var countGoodSubstrings = function (s) {
   let count = 0;
   let left = 0;

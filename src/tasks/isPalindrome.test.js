@@ -1,6 +1,13 @@
-import { expect, test } from "vitest";
+/**
+ * Проверить, является ли строка палиндромом
+ *
+ * Задача: Проверить, является ли строка палиндромом (читается одинаково слева направо и справа налево),
+ * игнорируя небуквенные символы и регистр.
+ *
+ * Паттерны: #strings, #two_pointers
+ */
 
-// #two_pointers
+import { expect, test } from "vitest";
 
 const isLetter = (char) => {
   return /[a-zа-я0-9]/.test(char);

@@ -1,11 +1,14 @@
-import { expect, test } from "vitest";
-
 // https://leetcode.com/problems/largest-perimeter-triangle/description/
 
 /**
- * @param {number[]} nums
- * @return {number}
+ * Найти наибольший периметр треугольника
+ *
+ * Задача: Найти наибольший периметр треугольника, который можно составить из элементов массива.
+ *
+ * Паттерны: #arrays
  */
+
+import { expect, test } from "vitest";
 function largestPerimeter(nums) {
   nums.sort((a, b) => b - a);
 
