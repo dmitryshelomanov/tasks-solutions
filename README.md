@@ -107,6 +107,8 @@ tasks-solutions/
 #### 🌐 Веб-разработка
 - **[CORS](./docs/web/cors.md)** — Cross-Origin Resource Sharing
 - **[CSP](./docs/web/csp.md)** — Content Security Policy
+- **[JS-движки и браузерные движки](./docs/web/js-and-browser-engines.md)** — отличие JavaScript Engine от Browser Engine и как они работают вместе
+- **[Критический путь рендеринга](./docs/web/critical-rendering-path.md)** — что такое CRP и как его оптимизировать (SSR, Streaming, Hydration, Code Splitting, App Shell)
 
 #### 🤖 Искусственный интеллект
 - **[AI — Обзор](./docs/AI/README.md)** — основные понятия AI
