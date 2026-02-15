@@ -82,6 +82,7 @@
 - **[5. Longest Palindromic Substring](./tasks/5.%20Longest%20Palindromic%20Substring.test.js)** — найти самую длинную палиндромную подстроку
 - **[146. LRU Cache](./tasks/146.%20LRU%20Cache.test.js)** — реализация LRU кэша
 - **[224. Basic Calculator](./tasks/224.%20Basic%20Calculator.test.js)** — вычислить арифметическое выражение со скобками
+- **[316. Remove Duplicate Letters](./tasks/316.%20Remove%20Duplicate%20Letters.test.js)** — удалить дубликаты букв, сохраняя лексикографически наименьший порядок
 - **[459. Repeated Substring Pattern](./tasks/459.%20Repeated%20Substring%20Pattern.test.js)** — проверить, состоит ли строка из повторяющейся подстроки
 - **[482. License Key Formatting](./tasks/482.%20License%20Key%20Formatting.test.js)** — форматирование лицензионного ключа
 - **[821. Shortest Distance to a Character](./tasks/821.%20Shortest%20Distance%20to%20a%20Character.test.js)** — кратчайшее расстояние до символа

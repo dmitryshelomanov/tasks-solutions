@@ -1,0 +1,17 @@
+{
+  "name": "Process Task",
+  "description": "Обработать файл с задачей: перенести в нужную папку, очистить код, добавить комментарии/теги и написать тесты",
+  "prompt": "process-task",
+  "context": {
+    "files": ["${file}"],
+    "codebase": true
+  },
+  "parameters": [
+    {
+      "name": "file",
+      "description": "Путь к файлу с задачей (если не указан, используется текущий открытый файл)",
+      "type": "string",
+      "required": false
+    }
+  ]
+}
