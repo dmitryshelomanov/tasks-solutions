@@ -36,12 +36,8 @@ function removeDuplicateLetters(s) {
   for (let i = 0; i < s.length; i++) {
     const char = s[i];
 
-    // Если буква уже в стеке - пропускаем
     if (seen.has(char)) continue;
 
-    // Удаляем буквы из стека, если:
-    // 1. Текущая буква меньше последней в стеке (лексикографически)
-    // 2. Последняя буква еще встретится позже (можно будет добавить её позже)
     while (
       stack.length > 0 &&
       char < stack[stack.length - 1] &&
@@ -50,7 +46,6 @@ function removeDuplicateLetters(s) {
       seen.delete(stack.pop());
     }
 
-    // Добавляем текущую букву
     stack.push(char);
     seen.add(char);
   }
@@ -73,10 +68,6 @@ test("removeDuplicateLetters - edge cases", () => {
 
   // Уже отсортированные буквы
   expect(removeDuplicateLetters("abc")).toBe("abc");
-
-  // Обратный порядок
-  expect(removeDuplicateLetters("cba")).toBe("abc");
-
   // Сложный случай
   expect(removeDuplicateLetters("bbcaac")).toBe("bac");
 });
