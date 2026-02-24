@@ -204,7 +204,7 @@
 - **Структуры данных**: [Структуры данных](./data-structures/structures.md), [Массивы vs Векторы](./data-structures/arrays-vs-vectors.md)
 - **Системный дизайн**: [Функциональные и нефункциональные требования](./systedesign/functional-and-non-functional-requirements.md), [CAP теорема](./systedesign/cap-theorem.md), [Кэширование](./systedesign/caching-strategies.md), [Load Balancing](./systedesign/load-balancing.md), [Message Queues](./systedesign/message-queues.md), [Типы БД](./systedesign/database-types.md), [Пример собеседования](./systedesign/system-design-interview-example.md)
 - **Веб**: [CORS](./web/cors.md), [CSP](./web/csp.md), [Прототипы](./javascript/prototypes.md), [Методы классов](./javascript/class-methods.md)
-- **Искусственный интеллект**: [AI — Обзор](./AI/README.md)
+- **Искусственный интеллект**: [AI — Обзор](./AI/)
 
 ---
 

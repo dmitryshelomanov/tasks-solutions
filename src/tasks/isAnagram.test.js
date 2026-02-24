@@ -23,18 +23,14 @@ function isAnagram(a = "", b = "") {
   for (let i = 0; i < b.length; i++) {
     if (map.has(b[i])) {
       map.set(b[i], map.get(b[i]) - 1);
+
+      if (map.get(b[i]) === 0) {
+        map.delete(b[i]);
+      }
     }
   }
 
-  const keys = map.keys();
-
-  for (let key of keys) {
-    if (map.get(key) !== 0) {
-      return false;
-    }
-  }
-
-  return true;
+  return map.size === 0;
 }
 
 test("isAnagram", () => {
