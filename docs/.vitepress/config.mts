@@ -37,16 +37,34 @@ export default defineConfig({
   },
 
   themeConfig: {
+    search: {
+      provider: "local",
+    },
     nav: [
       { text: "Главная", link: "/" },
       { text: "Команды", link: "/commands" },
-      { text: "Алгоритмы", link: "/algorithms/" },
-      { text: "JavaScript", link: "/javascript/" },
-      { text: "TypeScript", link: "/typescript/" },
-      { text: "Структуры данных", link: "/data-structures/" },
-      { text: "Системный дизайн", link: "/systedesign/" },
-      { text: "Веб", link: "/web/" },
-      { text: "React", link: "/react/" },
+      {
+        text: "Языки",
+        items: [
+          { text: "JavaScript", link: "/javascript/" },
+          { text: "TypeScript", link: "/typescript/" },
+        ],
+      },
+      {
+        text: "Собеседование",
+        items: [
+          { text: "Алгоритмы", link: "/algorithms/" },
+          { text: "Структуры данных", link: "/data-structures/" },
+          { text: "Системный дизайн", link: "/systedesign/" },
+        ],
+      },
+      {
+        text: "Стек",
+        items: [
+          { text: "Веб", link: "/web/" },
+          { text: "React", link: "/react/" },
+        ],
+      },
       { text: "AI", link: "/AI/" },
       { text: "Ресурсы", link: "/resources/" },
     ],
