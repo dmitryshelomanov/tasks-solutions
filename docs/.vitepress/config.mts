@@ -39,6 +39,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "Главная", link: "/" },
+      { text: "Команды", link: "/commands" },
       { text: "Алгоритмы", link: "/algorithms/" },
       { text: "JavaScript", link: "/javascript/" },
       { text: "TypeScript", link: "/typescript/" },
