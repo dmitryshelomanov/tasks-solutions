@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Перенаправление…</title>
+    <script type="text/javascript">
+      var base = "/tasks-solutions/";
+      var path = location.pathname;
+      if (
+        path.startsWith(base) &&
+        path !== base &&
+        path !== base.replace(/\/$/, "")
+      ) {
+        sessionStorage.setItem("vitepress-404-redirect", path);
+      }
+      location.replace(location.origin + base);
+    </script>
+  </head>
+  <body>
+    <p>Перенаправление на <a href="/tasks-solutions/">главную</a>…</p>
+  </body>
+</html>

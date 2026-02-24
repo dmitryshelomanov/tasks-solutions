@@ -5,6 +5,7 @@ export default defineConfig({
   description:
     "Документация по алгоритмам, структурам данных, JavaScript, TypeScript и системному дизайну",
   base: "/tasks-solutions/",
+  cleanUrls: true,
   lang: "ru-RU",
 
   head: [
@@ -212,6 +213,10 @@ export default defineConfig({
       {
         icon: "github",
         link: "https://github.com/dmitryshelomanov/tasks-solutions",
+      },
+      {
+        icon: "telegram",
+        link: "https://t.me/dmitryshelomanov",
       },
     ],
   },
