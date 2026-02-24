@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 docs/.vitepress/dist
-# docs/.vitepress/cache
+docs/.vitepress/cache
 *.local
 
 rag
