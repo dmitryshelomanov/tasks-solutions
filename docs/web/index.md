@@ -23,6 +23,11 @@
 
 ### Устройство браузера и рендеринг
 
+- **[Как работает браузер](./how-browsers-work.md)** (выжимка по циклу статей KTS на Habr):
+  - Часть 1: навигация (DNS, TCP, TLS), получение данных (HTTP, TTFB, медленный старт)
+  - Часть 2: парсинг HTML → DOM, CSS → CSSOM, предзагрузчики, выполнение JS (движки, JIT, AST)
+  - Часть 3: дерево доступности (A11y), дерево рендеринга, layout, paint, слои и композитинг
+
 - **[JS-движки и браузерные движки](./js-and-browser-engines.md)**:
   - Что такое JavaScript Engine (V8, SpiderMonkey, JavaScriptCore)
   - Что такое Browser Engine (Blink, WebKit, Gecko)

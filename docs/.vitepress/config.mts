@@ -173,6 +173,10 @@ export default defineConfig({
             { text: "CORS", link: "/web/cors" },
             { text: "CSP", link: "/web/csp" },
             {
+              text: "Как работает браузер",
+              link: "/web/how-browsers-work",
+            },
+            {
               text: "JS-движки и браузерные движки",
               link: "/web/js-and-browser-engines",
             },
