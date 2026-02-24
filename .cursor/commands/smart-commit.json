@@ -1,0 +1,7 @@
+{
+  "name": "Smart Commit",
+  "description": "Suggest commit message options and commit the selected one (without push, without Co-authored-by)",
+  "prompt": "smart-commit",
+  "context": {},
+  "parameters": []
+}
