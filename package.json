@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "dev:docs": "vitepress dev docs",
+    "build:docs": "vitepress build docs",
+    "preview:docs": "vitepress preview docs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest"
@@ -15,6 +18,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "vitepress": "^1.0.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",

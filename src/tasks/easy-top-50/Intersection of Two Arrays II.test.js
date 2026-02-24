@@ -10,13 +10,14 @@
  */
 
 import { expect, test } from "vitest";
+
 var intersect = function (nums1, nums2) {
   const rs = [];
-  const map = new Map();
+  const map = new Set();
 
   for (let n of nums1) {
     if (!map.has(n)) {
-      map.set(n, 1);
+      map.add(n);
     }
   }
 
