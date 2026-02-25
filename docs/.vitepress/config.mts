@@ -21,21 +21,6 @@ export default defineConfig({
   srcExclude: ["**/typescript/interview-questions.md"],
   ignoreDeadLinks: true,
 
-  markdown: {
-    config: (md) => {
-      const defaultFence = md.renderer.rules.fence!;
-
-      md.renderer.rules.fence = (tokens, idx, options, env, self) => {
-        const token = tokens[idx];
-        const original = token.content;
-        token.content = original.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        const out = defaultFence(tokens, idx, options, env, self);
-        token.content = original;
-        return out;
-      };
-    },
-  },
-
   themeConfig: {
     search: {
       provider: "local",
