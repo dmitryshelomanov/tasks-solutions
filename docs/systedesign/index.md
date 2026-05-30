@@ -28,6 +28,7 @@
 
 ### 🔵 Мониторинг и логирование
 
+- [Метрики и мониторинг](./metrics.md) — latency, p95, RPS, error rate, Golden Signals, SLO
 - [Стек ELK](./elk-stack.md) — Elasticsearch, Logstash, Kibana для логирования и анализа
 
 ---

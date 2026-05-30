@@ -146,6 +146,10 @@ export default defineConfig({
             },
             { text: "REST API", link: "/systedesign/rest-api" },
             { text: "Message Queues", link: "/systedesign/message-queues" },
+            {
+              text: "Метрики и мониторинг",
+              link: "/systedesign/metrics",
+            },
             { text: "Стек ELK", link: "/systedesign/elk-stack" },
           ],
         },

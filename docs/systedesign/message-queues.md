@@ -445,5 +445,5 @@ retry_delay = min(2 ** retry_count, 300)  # 1s, 2s, 4s, 8s... до 300s
 
 ## Навигация
 
-[← Предыдущая: REST API](./rest-api.md) | [Следующая: Стек ELK →](./elk-stack.md)
+[← Предыдущая: REST API](./rest-api.md) | [Следующая: Метрики и мониторинг →](./metrics.md)
 

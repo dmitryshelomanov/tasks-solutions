@@ -123,6 +123,7 @@ tasks-solutions/
 - **[Стратегии кэширования](./docs/systedesign/caching-strategies.md)** — паттерны кэширования и инвалидация
 - **[REST API](./docs/systedesign/rest-api.md)** — проектирование RESTful API
 - **[Message Queues](./docs/systedesign/message-queues.md)** — асинхронная коммуникация через очереди
+- **[Метрики и мониторинг](./docs/systedesign/metrics.md)** — latency, p95, RPS, error rate, Golden Signals, SLO
 - **[Репликация и шардирование](./docs/systedesign/replication-and-sharding.md)** — стратегии масштабирования БД
 - **[Стек ELK](./docs/systedesign/elk-stack.md)** — Elasticsearch, Logstash, Kibana для логирования и анализа
 
