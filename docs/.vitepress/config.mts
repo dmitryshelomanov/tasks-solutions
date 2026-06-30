@@ -279,7 +279,17 @@ export default defineConfig({
       ],
     },
 
-    outline: { level: [2, 3] },
+    outline: {
+      label: "На этой странице",
+      level: [2, 3],
+    },
+    docFooter: {
+      prev: "Предыдущая страница",
+      next: "Следующая страница",
+    },
+    darkModeSwitchLabel: "Тема",
+    sidebarMenuLabel: "Меню",
+    returnToTopLabel: "Наверх",
     socialLinks: [
       {
         icon: "github",
