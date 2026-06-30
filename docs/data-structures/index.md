@@ -24,6 +24,11 @@
   - Примеры использования
   - Кортежи
 
+### Практика
+
+- **[Реализации в репозитории](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/structures)** — stack, queue, linked-list с тестами
+- **[Каталог задач](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/README.md)** — алгоритмические задачи по структурам данных
+
 ## 🔗 Связанные разделы
 
 - **[Алгоритмы](../algorithms/)** — паттерны решения задач и анализ сложности

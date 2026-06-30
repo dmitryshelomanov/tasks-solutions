@@ -30,6 +30,11 @@
   - devDependencies, peerDependencies
   - engines, repository, homepage
 
+### Практика в репозитории
+
+- **[JavaScript-задачи](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/tasks/javascript)** — Promise.all, deepCopy, Event Emitter и др.
+- **[Утилиты](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/functions)** — compose, curry, promises
+
 ## 🔗 Связанные разделы
 
 - **[TypeScript](../typescript/)** — продвинутые типы и вопросы с собеседований

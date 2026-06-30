@@ -79,67 +79,23 @@ tasks-solutions/
 
 ## 📚 Документация
 
-### 🎯 Быстрые ссылки
+Полная документация собирается через VitePress и доступна на [GitHub Pages](https://dmitryshelomanov.github.io/tasks-solutions/).
 
-#### 📚 Алгоритмы и паттерны
-- **[Паттерны решения задач](./docs/algorithms/algorithm-patterns.md)** — 16 основных паттернов (скользящее окно, два указателя, BFS/DFS и др.)
-- **[Big O нотация](./docs/algorithms/big-o-notation.md)** — анализ сложности алгоритмов
+### Быстрые ссылки
 
-#### 🔧 JavaScript
-- **[Объекты и ссылки](./docs/javascript/objects.md)** — работа с объектами в JavaScript
-- **[Контекст и область видимости](./docs/javascript/context-scope-variables.md)** — `this`, scope, arrow functions
-- **[Event Loop](./docs/javascript/event-loop.md)** — асинхронность и очередь выполнения
-- **[Числа](./docs/javascript/numbers.md)** — работа с числами и BigInt
-- **[Вопросы с собеседований](./docs/javascript/interview-questions.md)** — топ-6 популярных вопросов по JavaScript
-- **[package.json](./docs/javascript/package-json.md)** — основные поля и их назначение
-- **[Прототипы](./docs/javascript/prototypes.md)** — прототипное наследование
-- **[Методы классов](./docs/javascript/class-methods.md)** — наследование и контекст
+| Раздел | Ключевые материалы |
+|--------|-------------------|
+| [Алгоритмы](./docs/algorithms/) | [Паттерны](./docs/algorithms/algorithm-patterns.md), [Big O](./docs/algorithms/big-o-notation.md) |
+| [JavaScript](./docs/javascript/) | [Event Loop](./docs/javascript/event-loop.md), [Вопросы с собеседований](./docs/javascript/interview-questions.md) |
+| [TypeScript](./docs/typescript/) | [Вопросы с собеседований](./docs/typescript/interview-questions-overview.md) |
+| [Структуры данных](./docs/data-structures/) | [Основные структуры](./docs/data-structures/structures.md) |
+| [Системный дизайн](./docs/systedesign/) | [Обзор](./docs/systedesign/index.md), [Пример собеседования](./docs/systedesign/system-design-interview-example.md) |
+| [Веб](./docs/web/) | [HTTP](./docs/web/http.md), [CORS](./docs/web/cors.md), [Core Web Vitals](./docs/web/core-web-vitals.md) |
+| [React](./docs/react/) | [Reconciliation](./docs/react/reconciliation.md), [Оптимизация](./docs/react/optimization.md), [Hooks](./docs/react/hooks.md) |
+| [AI](./docs/AI/) | [LLM](./docs/AI/llm.md), [MCP](./docs/AI/mcp.md), [Skills](./docs/AI/skills.md) |
+| [Ресурсы](./docs/resources/) | [Книги](./docs/resources/books.md) |
 
-#### 📘 TypeScript
-- **[Вопросы с собеседований по TypeScript](./docs/typescript/interview-questions.md)** — топ-10 вопросов уровня Middle+ по TypeScript
-
-#### ⚛️ React
-- **[React Hooks](./docs/react/hooks.md)** — продвинутые хуки React
-
-#### 📊 Структуры данных
-- **[Основные структуры](./docs/data-structures/structures.md)** — массивы, списки, стеки, очереди, графы
-- **[Массивы vs Векторы](./docs/data-structures/arrays-vs-vectors.md)** — различия и применение
-
-#### 🌐 Веб-разработка
-- **[CORS](./docs/web/cors.md)** — Cross-Origin Resource Sharing
-- **[CSP](./docs/web/csp.md)** — Content Security Policy
-- **[JS-движки и браузерные движки](./docs/web/js-and-browser-engines.md)** — отличие JavaScript Engine от Browser Engine и как они работают вместе
-- **[Критический путь рендеринга](./docs/web/critical-rendering-path.md)** — что такое CRP и как его оптимизировать (SSR, Streaming, Hydration, Code Splitting, App Shell)
-
-#### 🏗️ Системный дизайн
-- **[Системный дизайн — Обзор](./docs/systedesign/README.md)** — полный обзор материалов по системному дизайну
-- **[Пример системного собеседования](./docs/systedesign/system-design-interview-example.md)** — пошаговый разбор на примере сервиса поиска ответов
-- **[Функциональные и нефункциональные требования](./docs/systedesign/functional-and-non-functional-requirements.md)** — сбор и анализ требований к системе
-- **[Оценка нагрузки и ресурсов](./docs/systedesign/load-estimation.md)** — расчёт RPS, объёма данных, CPU/RAM
-- **[Типы баз данных](./docs/systedesign/database-types.md)** — реляционные, NoSQL, графовые, временные ряды и др.
-- **[CAP теорема](./docs/systedesign/cap-theorem.md)** — компромиссы в распределённых системах
-- **[Масштабирование](./docs/systedesign/scaling.md)** — вертикальное и горизонтальное масштабирование
-- **[Load Balancing](./docs/systedesign/load-balancing.md)** — балансировка нагрузки между серверами
-- **[Стратегии кэширования](./docs/systedesign/caching-strategies.md)** — паттерны кэширования и инвалидация
-- **[REST API](./docs/systedesign/rest-api.md)** — проектирование RESTful API
-- **[Message Queues](./docs/systedesign/message-queues.md)** — асинхронная коммуникация через очереди
-- **[Метрики и мониторинг](./docs/systedesign/metrics.md)** — latency, p95, RPS, error rate, Golden Signals, SLO
-- **[Репликация и шардирование](./docs/systedesign/replication-and-sharding.md)** — стратегии масштабирования БД
-- **[Стек ELK](./docs/systedesign/elk-stack.md)** — Elasticsearch, Logstash, Kibana для логирования и анализа
-
-#### 🤖 Искусственный интеллект
-- **[AI — Обзор](./docs/AI/README.md)** — основные понятия AI
-  - [Эмбеддинги](./docs/AI/embeddings.md) — числовое представление данных
-  - [LLM](./docs/AI/llm.md) — большие языковые модели
-  - [MCP](./docs/AI/mcp.md) — Model Context Protocol
-  - [Skills](./docs/AI/skills.md) — скиллы агента в Cursor (инструкции для конкретных задач)
-
-#### 📖 Ресурсы
-- **[Книги и материалы](./docs/resources/books.md)** — полезные ресурсы для изучения
-
-### 📖 Полная документация
-
-👉 **[Перейти к полной документации](./docs/README.md)**
+Локальный запуск: `yarn docs`. Подробнее: [docs/README.md](./docs/README.md).
 
 ---
 

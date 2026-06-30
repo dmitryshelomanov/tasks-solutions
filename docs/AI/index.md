@@ -61,6 +61,11 @@
 
 📖 [Читать подробнее →](./skills.md)
 
+**Примеры Skills:**
+- [Пример описания](./skills/example-description.md) — как написать description для скилла
+- [Личное vs проект](./skills/example-personal-vs-project.md) — где хранить скиллы
+- [Пример структуры](./skills/example-structure.md) — шаблон SKILL.md
+
 ---
 
 ## 🔗 Взаимосвязь технологий

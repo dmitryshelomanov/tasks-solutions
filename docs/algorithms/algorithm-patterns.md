@@ -13,7 +13,7 @@
 
 ## Шаблоны
 
-14 шаблонов, которые мы рассмотрим сегодня:
+16 шаблонов, которые мы рассмотрим сегодня:
 
 1. Скользящее окно.
 2. Два Указателя или Итератора.
@@ -29,7 +29,7 @@
 12. Топ К-элементов.
 13. K-way слияние.
 14. Топологическая сортировка.
-15. Алгоритм кадане
+15. Алгоритм Кадане
 16. Разделяй и властвуй
 
 
@@ -83,6 +83,10 @@ function maxSumSubarray(arr, k) {
 }
 ```
 
+### Решения в репозитории
+
+- [Задачи на скользящее окно](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/tasks/sliding-window)
+
 ## 2. Два указателя или итератора (Two Pointers)
 
 ### Описание
@@ -124,6 +128,11 @@ function twoSumSorted(arr, target) {
   return [];
 }
 ```
+
+### Решения в репозитории
+
+- [Two Sum](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/easy-top-50/Two%20Sum.test.js)
+- [Three Sum](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/threeSumm.test.js)
 
 ## 3. Быстрые и медленные указатели (Fast & Slow Pointers)
 
@@ -333,6 +342,10 @@ function reverseListRecursive(head) {
 }
 ```
 
+### Решения в репозитории
+
+- [Reverse Linked List](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/easy-top-50/linked-list/Reverse%20Linked%20List.test.js)
+
 ## 7. Дерево BFS (Breadth-First Search)
 
 ### Описание
@@ -385,6 +398,11 @@ function levelOrder(root) {
   return result;
 }
 ```
+
+### Решения в репозитории
+
+- [Clone Graph](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/clone-graph.test.js)
+- [Задачи на графы](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/tasks/graph)
 
 ## 8. Дерево DFS (Depth-First Search)
 
@@ -600,6 +618,10 @@ function subsetsRecursive(nums) {
 - Бинарный поиск, не зависящий от порядка (лёгкий);
 - Поиск в отсортированном бесконечном массиве (средний).
 
+### Решения в репозитории
+
+- [Задачи на бинарный поиск](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/tasks/binary-search)
+
 ## Топ К-элементов
 
 Любая задача, в которой требуется найти самые большие / самые маленькие / частые K-элементы среди данного набора, подпадает под этот шаблон.
@@ -618,6 +640,10 @@ function subsetsRecursive(nums) {
 
 - топ K-номеров (лёгкий);
 - топ K-частых номеров (средний).
+
+### Решения в репозитории
+
+- [LRU Cache](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/146.%20LRU%20Cache.test.js)
 
 ## 13. K-way слияние (K-way Merge)
 
@@ -811,6 +837,10 @@ function maxSubarraySum(nums) {
 }
 ```
 
+### Решения в репозитории
+
+- [Maximum Subarray](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/easy-top-50/Maximum%20Subarray.test.js)
+
 ### Пример кода (с возвратом индексов)
 
 ```javascript
@@ -930,3 +960,19 @@ function maxSubarraySumDivideConquer(nums) {
 
 - **Кадане (Kadane)**: O(n) времени, O(1) памяти — оптимальнее для этой задачи
 - **Разделяй и властвуй**: O(n log n) времени, O(log n) памяти — демонстрирует общий подход
+
+---
+
+## Решения в репозитории
+
+Полный каталог задач с тестами: [src/README.md](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/README.md)
+
+| Паттерн | Папка / задача |
+|---------|----------------|
+| Скользящее окно | [src/tasks/sliding-window/](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/tasks/sliding-window) |
+| Два указателя | [Two Sum](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/easy-top-50/Two%20Sum.test.js), [Three Sum](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/threeSumm.test.js) |
+| Связный список | [src/tasks/easy-top-50/linked-list/](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/tasks/easy-top-50/linked-list) |
+| BFS / DFS / графы | [src/tasks/graph/](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/tasks/graph) |
+| Бинарный поиск | [src/tasks/binary-search/](https://github.com/dmitryshelomanov/tasks-solutions/tree/main/src/tasks/binary-search) |
+| Кадане | [Maximum Subarray](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/easy-top-50/Maximum%20Subarray.test.js) |
+| LRU Cache | [146. LRU Cache](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/tasks/146.%20LRU%20Cache.test.js) |

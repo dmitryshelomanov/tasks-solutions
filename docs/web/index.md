@@ -4,6 +4,10 @@
 
 ## 📚 Содержание
 
+### Протоколы и сеть
+
+- **[HTTP и HTTPS](./http.md)** — жизненный цикл запроса, методы, заголовки, TLS
+
 ### Безопасность
 
 - **[CORS](./cors.md)** — Cross-Origin Resource Sharing:
@@ -39,6 +43,11 @@
   - Какие шаги проходит браузер от HTML до пикселей
   - Паттерны оптимизации CRP (SSR, Streaming, Hydration, Code Splitting, App Shell, Skeletons)
   - Почему это важно для SPA и React-приложений
+
+- **[Core Web Vitals](./core-web-vitals.md)**:
+  - LCP, INP, CLS — метрики производительности
+  - Связь с критическим путём рендеринга
+  - Измерение и оптимизация
 
 ## 🔗 Связанные разделы
 

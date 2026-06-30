@@ -23,6 +23,30 @@ description: Материалы по алгоритмам, структурам 
 
 **[Полный список задач с решениями](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/README.md)** — исходный код на GitHub.
 
+## Маршруты подготовки
+
+### Алгоритмическое собеседование
+
+1. [Big O нотация](/algorithms/big-o-notation) — анализ сложности
+2. [Паттерны решения задач](/algorithms/algorithm-patterns) — 16 шаблонов
+3. [Структуры данных](/data-structures/structures) — массивы, списки, стеки, графы
+4. [Задачи в репозитории](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/README.md) — практика с тестами
+
+### Frontend-собеседование
+
+1. [JavaScript](/javascript/) — Event Loop, прототипы, контекст
+2. [TypeScript](/typescript/) — продвинутые типы
+3. [React Hooks](/react/hooks) — продвинутые хуки, [оптимизация](/react/optimization)
+4. [Веб](/web/) — HTTP, CORS, CSP, [Core Web Vitals](/web/core-web-vitals)
+
+### System Design
+
+1. [Функциональные и нефункциональные требования](/systedesign/functional-and-non-functional-requirements)
+2. [Оценка нагрузки](/systedesign/load-estimation)
+3. [Типы баз данных](/systedesign/database-types) → [Репликация и шардирование](/systedesign/replication-and-sharding)
+4. [Масштабирование](/systedesign/scaling) → [Кэширование](/systedesign/caching-strategies)
+5. [Пример системного собеседования](/systedesign/system-design-interview-example)
+
 ## Команды Cursor
 
 В проекте используется команда **Process Task**: обрабатывает файл с алгоритмической задачей — переносит в нужную папку, очищает код, добавляет JSDoc/теги и пишет тесты.

@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Tasks Solutions",
   description:
-    "Документация по алгоритмам, структурам данных, JavaScript, TypeScript и системному дизайну",
+    "Документация по алгоритмам, структурам данных, JavaScript, TypeScript, веб-разработке, React, системному дизайну и AI",
   base: "/tasks-solutions/",
   cleanUrls: true,
   lang: "ru-RU",
@@ -19,7 +19,6 @@ export default defineConfig({
   ],
 
   srcExclude: ["**/typescript/interview-questions.md"],
-  ignoreDeadLinks: true,
 
   themeConfig: {
     search: {
@@ -98,6 +97,49 @@ export default defineConfig({
             {
               text: "Вопросы с собеседований",
               link: "/typescript/interview-questions-overview",
+              collapsed: false,
+              items: [
+                {
+                  text: "Union и Intersection",
+                  link: "/typescript/interview-questions/01-union-intersection",
+                },
+                {
+                  text: "Type Assertions и Guards",
+                  link: "/typescript/interview-questions/02-type-assertions-guards",
+                },
+                {
+                  text: "Conditional Types",
+                  link: "/typescript/interview-questions/03-conditional-types",
+                },
+                {
+                  text: "Mapped Types",
+                  link: "/typescript/interview-questions/04-mapped-types",
+                },
+                {
+                  text: "Utility Types",
+                  link: "/typescript/interview-questions/05-utility-types",
+                },
+                {
+                  text: "Generics",
+                  link: "/typescript/interview-questions/06-generics",
+                },
+                {
+                  text: "Template Literal Types",
+                  link: "/typescript/interview-questions/07-template-literal-types",
+                },
+                {
+                  text: "Type Narrowing",
+                  link: "/typescript/interview-questions/08-type-narrowing",
+                },
+                {
+                  text: "Distributive Conditional",
+                  link: "/typescript/interview-questions/09-distributive-conditional",
+                },
+                {
+                  text: "Branded Types",
+                  link: "/typescript/interview-questions/10-branded-types",
+                },
+              ],
             },
           ],
         },
@@ -144,8 +186,12 @@ export default defineConfig({
               text: "Стратегии кэширования",
               link: "/systedesign/caching-strategies",
             },
+            { text: "CDN", link: "/systedesign/cdn" },
+            { text: "Rate Limiting", link: "/systedesign/rate-limiting" },
             { text: "REST API", link: "/systedesign/rest-api" },
             { text: "Message Queues", link: "/systedesign/message-queues" },
+            { text: "WebSockets и SSE", link: "/systedesign/websockets" },
+            { text: "Идемпотентность", link: "/systedesign/idempotency" },
             {
               text: "Метрики и мониторинг",
               link: "/systedesign/metrics",
@@ -159,6 +205,7 @@ export default defineConfig({
           text: "Веб-разработка",
           items: [
             { text: "Обзор", link: "/web/" },
+            { text: "HTTP и HTTPS", link: "/web/http" },
             { text: "CORS", link: "/web/cors" },
             { text: "CSP", link: "/web/csp" },
             {
@@ -173,6 +220,7 @@ export default defineConfig({
               text: "Критический путь рендеринга",
               link: "/web/critical-rendering-path",
             },
+            { text: "Core Web Vitals", link: "/web/core-web-vitals" },
           ],
         },
       ],
@@ -181,6 +229,11 @@ export default defineConfig({
           text: "React",
           items: [
             { text: "Обзор", link: "/react/" },
+            {
+              text: "Virtual DOM и Reconciliation",
+              link: "/react/reconciliation",
+            },
+            { text: "Оптимизация", link: "/react/optimization" },
             { text: "React Hooks", link: "/react/hooks" },
           ],
         },
@@ -193,18 +246,24 @@ export default defineConfig({
             { text: "Эмбеддинги", link: "/AI/embeddings" },
             { text: "LLM", link: "/AI/llm" },
             { text: "MCP", link: "/AI/mcp" },
-            { text: "Skills", link: "/AI/skills" },
             {
-              text: "Skills: пример описания",
-              link: "/AI/skills/example-description",
-            },
-            {
-              text: "Skills: личное vs проект",
-              link: "/AI/skills/example-personal-vs-project",
-            },
-            {
-              text: "Skills: пример структуры",
-              link: "/AI/skills/example-structure",
+              text: "Skills",
+              collapsed: false,
+              items: [
+                { text: "Обзор", link: "/AI/skills" },
+                {
+                  text: "Пример описания",
+                  link: "/AI/skills/example-description",
+                },
+                {
+                  text: "Личное vs проект",
+                  link: "/AI/skills/example-personal-vs-project",
+                },
+                {
+                  text: "Пример структуры",
+                  link: "/AI/skills/example-structure",
+                },
+              ],
             },
           ],
         },

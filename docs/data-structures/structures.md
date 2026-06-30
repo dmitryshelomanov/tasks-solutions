@@ -108,6 +108,10 @@ class LinkedList {
 }
 ```
 
+### Решение в репозитории
+
+- [Linked List](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/structures/linked-list.test.js)
+
 ---
 
 ## 3. Stack (Стек)
@@ -165,6 +169,10 @@ stack.push(3);
 console.log(stack.pop());  // 3 (последний добавленный)
 ```
 
+### Решение в репозитории
+
+- [Stack](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/structures/stack.test.js)
+
 ---
 
 ## 4. Queue (Очередь)
@@ -217,6 +225,10 @@ class Queue {
 
 // Эффективная очередь с двумя стеками или связным списком
 ```
+
+### Решение в репозитории
+
+- [Queue](https://github.com/dmitryshelomanov/tasks-solutions/blob/main/src/structures/queue.test.js)
 
 ---
 

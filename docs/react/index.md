@@ -4,6 +4,11 @@
 
 ## 📚 Содержание
 
+### Основы React
+
+- **[Virtual DOM и Reconciliation](./reconciliation.md)** — Virtual DOM, diffing, Fiber, render vs commit
+- **[Оптимизация](./optimization.md)** — memo, useMemo, useCallback — когда применять
+
 ### React Hooks
 
 - **[React Hooks](./hooks.md)** — продвинутые хуки React:
