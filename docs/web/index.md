@@ -1,20 +1,21 @@
 # Веб-разработка
 
-Материалы по веб-разработке: безопасность, CORS, CSP, устройство браузера и другие веб-технологии.
+Материалы по веб-разработке: протоколы, безопасность, устройство браузера и рендеринг.
 
 ## 📚 Содержание
 
 ### Протоколы и сеть
 
-- **[HTTP и HTTPS](./http.md)** — жизненный цикл запроса, методы, заголовки, TLS
+- **[HTTP и HTTPS](./http.md)** — жизненный цикл запроса, методы, статусы, кеш-заголовки, TLS, HTTP/2–3
 
 ### Безопасность
 
 - **[CORS](./cors.md)** — Cross-Origin Resource Sharing:
-  - Что такое CORS
-  - Клиент-серверное взаимодействие
-  - Настройка CORS на сервере
-  - Обход CORS для тестирования
+  - Simple vs preflight
+  - Заголовки и credentials
+  - Типичные ошибки
+
+- **[Безопасность](./security.md)** — XSS, CSRF, cookie-флаги (`HttpOnly`, `Secure`, `SameSite`)
 
 - **[CSP](./csp.md)** — Content Security Policy:
   - Что такое CSP и как работает
@@ -36,7 +37,7 @@
   - Что такое JavaScript Engine (V8, SpiderMonkey, JavaScriptCore)
   - Что такое Browser Engine (Blink, WebKit, Gecko)
   - Как они работают вместе в браузере
-  - Чем отличается выполнение JS в браузере и в Node.js
+  - Чем отличается исполнение JS в браузере и в Node.js
 
 - **[Критический путь рендеринга](./critical-rendering-path.md)**:
   - Что такое Critical Rendering Path (CRP)

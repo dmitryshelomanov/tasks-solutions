@@ -150,6 +150,10 @@ export default defineConfig({
           items: [
             { text: "Обзор", link: "/data-structures/" },
             { text: "Структуры данных", link: "/data-structures/structures" },
+            { text: "Heap", link: "/data-structures/heap" },
+            { text: "Trie", link: "/data-structures/trie" },
+            { text: "Union-Find", link: "/data-structures/union-find" },
+            { text: "LRU Cache", link: "/data-structures/lru-cache" },
             {
               text: "Массивы vs Векторы",
               link: "/data-structures/arrays-vs-vectors",
@@ -207,6 +211,7 @@ export default defineConfig({
             { text: "Обзор", link: "/web/" },
             { text: "HTTP и HTTPS", link: "/web/http" },
             { text: "CORS", link: "/web/cors" },
+            { text: "Безопасность", link: "/web/security" },
             { text: "CSP", link: "/web/csp" },
             {
               text: "Как работает браузер",
@@ -233,6 +238,12 @@ export default defineConfig({
               text: "Virtual DOM и Reconciliation",
               link: "/react/reconciliation",
             },
+            { text: "Keys и списки", link: "/react/keys-and-lists" },
+            {
+              text: "Effects и жизненный цикл",
+              link: "/react/effects-and-lifecycle",
+            },
+            { text: "Context", link: "/react/context" },
             { text: "Оптимизация", link: "/react/optimization" },
             { text: "React Hooks", link: "/react/hooks" },
           ],

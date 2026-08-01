@@ -317,6 +317,43 @@ const obj = Object.fromEntries(map);
 
 **Примечание**: В худшем случае (вырожденное дерево) все операции O(n). Для гарантированного O(log n) нужны самобалансирующиеся деревья (AVL, Red-Black).
 
+### Пример
+
+```javascript
+class TreeNode {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+function insert(root, value) {
+  if (!root) return new TreeNode(value);
+  if (value < root.value) root.left = insert(root.left, value);
+  else if (value > root.value) root.right = insert(root.right, value);
+  return root;
+}
+
+function search(root, value) {
+  if (!root || root.value === value) return root;
+  return value < root.value
+    ? search(root.left, value)
+    : search(root.right, value);
+}
+
+// In-order: отсортированный порядок для BST
+function inorder(root, acc = []) {
+  if (!root) return acc;
+  inorder(root.left, acc);
+  acc.push(root.value);
+  inorder(root.right, acc);
+  return acc;
+}
+```
+
+См. также: [Heap](./heap) (другой порядок в дереве), [Trie](./trie) (префиксы строк).
+
 ---
 
 ## 8. Graph (Граф)
@@ -361,8 +398,40 @@ const graph = {
 
 ### Алгоритмы обхода
 
-- **BFS (Breadth-First Search)** — обход в ширину
-- **DFS (Depth-First Search)** — обход в глубину
+- **BFS (Breadth-First Search)** — обход в ширину (очередь): кратчайший путь в невзвешенном графе
+- **DFS (Depth-First Search)** — обход в глубину (стек / рекурсия): компоненты, циклы, топосорт
+
+```javascript
+// Список смежности: { 0: [1, 2], 1: [0, 3], ... }
+function bfs(graph, start) {
+  const visited = new Set([start]);
+  const queue = [start];
+  const order = [];
+
+  while (queue.length) {
+    const node = queue.shift();
+    order.push(node);
+    for (const next of graph[node] || []) {
+      if (!visited.has(next)) {
+        visited.add(next);
+        queue.push(next);
+      }
+    }
+  }
+  return order;
+}
+
+function dfs(graph, start, visited = new Set(), order = []) {
+  visited.add(start);
+  order.push(start);
+  for (const next of graph[start] || []) {
+    if (!visited.has(next)) dfs(graph, next, visited, order);
+  }
+  return order;
+}
+```
+
+Для компонент связности без полного обхода каждый раз см. [Union-Find (DSU)](./union-find). Для кратчайших путей во взвешенном графе — Dijkstra с [Heap](./heap).
 
 ---
 
@@ -378,6 +447,19 @@ const graph = {
 | Map | O(1) | O(1) | O(1) | O(1) | Ключ-значение |
 | BST | - | O(log n) | O(log n) | O(log n) | Сбалансированное дерево |
 | Graph | - | O(V+E) | O(1) | O(E) | Зависит от представления |
+| Heap | O(1)* | - | O(log n) | O(log n) | *Только min/max |
+| Trie | - | O(L) | O(L) | O(L) | L — длина строки |
+| Union-Find | - | ~O(α(n)) | ~O(α(n)) | - | Компоненты связности |
+| LRU Cache | O(1) | O(1) | O(1) | O(1) | Map + список |
+
+---
+
+## Дополнительные структуры
+
+- [Heap](./heap) — priority queue, Top-K
+- [Trie](./trie) — префиксный поиск, autocomplete
+- [Union-Find](./union-find) — DSU, компоненты связности
+- [LRU Cache](./lru-cache) — кэш с вытеснением
 
 ---
 
