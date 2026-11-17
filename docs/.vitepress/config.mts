@@ -174,10 +174,6 @@ export default defineConfig({
               text: "Оценка нагрузки и ресурсов",
               link: "/systedesign/load-estimation",
             },
-            {
-              text: "Пример системного собеседования",
-              link: "/systedesign/system-design-interview-example",
-            },
             { text: "Типы баз данных", link: "/systedesign/database-types" },
             {
               text: "Репликация и шардирование",
@@ -201,6 +197,10 @@ export default defineConfig({
               link: "/systedesign/metrics",
             },
             { text: "Стек ELK", link: "/systedesign/elk-stack" },
+            {
+              text: "Пример системного собеседования",
+              link: "/systedesign/system-design-interview-example",
+            },
           ],
         },
       ],

@@ -43,7 +43,7 @@ description: Материалы по алгоритмам, структурам 
 
 1. [Функциональные и нефункциональные требования](/systedesign/functional-and-non-functional-requirements)
 2. [Оценка нагрузки](/systedesign/load-estimation)
-3. [Типы баз данных](/systedesign/database-types) → [Репликация и шардирование](/systedesign/replication-and-sharding)
+3. [Типы баз данных](/systedesign/database-types) → [Репликация и шардирование](/systedesign/replication-and-sharding) → [CAP теорема](/systedesign/cap-theorem)
 4. [Масштабирование](/systedesign/scaling) → [Кэширование](/systedesign/caching-strategies)
 5. [Пример системного собеседования](/systedesign/system-design-interview-example)
 

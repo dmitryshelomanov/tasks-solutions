@@ -1,156 +1,135 @@
 /**
- * Tasks Solutions — theme aligned with dmitryshelomanov.github.io
- * Fonts: Tungsten (headings), DIN Next (body)
- * Palette: cold slate + #245dff accent, brutalist accents
+ * Tasks Solutions — Apple system fonts + teal/ink palette
+ * Typography: SF Pro / system UI; mono: SF Mono / Menlo
+ * Light: mist paper + teal accent; dark: deep ink + mint
  */
 
-@font-face {
-  font-family: "Tungsten-Bold";
-  font-display: swap;
-  src:
-    url("/tasks-solutions/fonts/tungsten/Tungsten-Bold_Web.woff2") format("woff2"),
-    url("/tasks-solutions/fonts/tungsten/Tungsten-Bold_Web.woff") format("woff");
-}
-
-@font-face {
-  font-family: "DINNextW05-Bold";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src:
-    url("/tasks-solutions/fonts/dinnext/DINNextW05-Bold.woff2") format("woff2"),
-    url("/tasks-solutions/fonts/dinnext/DINNextW05-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "DINNextW05-Medium";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src:
-    url("/tasks-solutions/fonts/dinnext/DINNextW05-Medium.woff2") format("woff2"),
-    url("/tasks-solutions/fonts/dinnext/DINNextW05-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  font-display: swap;
-  src: url("/tasks-solutions/fonts/notosans/NotoSans-Medium.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src:
-    url("/tasks-solutions/fonts/oswald/Oswald-700.woff2") format("woff2"),
-    url("/tasks-solutions/fonts/oswald/Oswald-700.woff") format("woff");
-}
-
 :root {
-  --color-body-bg: #eceff3;
-  --color-list-bg: #f8f9fb;
-  --color-list-bg-strong: #eef1f5;
-  --color-list-border: #18243d;
-  --color-list-font: #172238;
-  --color-accent: #245dff;
-  --color-link: #245dff;
-  --color-page-grad-1: #ffffff;
-  --color-page-grad-2: #f4f5f8;
-  --color-page-grad-3: #e9edf2;
-  --color-brutal-shadow: 4px 4px 0 #18243d;
+  /* Atmosphere */
+  --color-body-bg: #f2f5f7;
+  --color-page-grad-1: rgba(20, 184, 166, 0.14);
+  --color-page-grad-2: rgba(14, 116, 144, 0.1);
+  --color-page-grad-3: rgba(255, 255, 255, 0.9);
+  --color-mesh-spot: rgba(45, 212, 191, 0.18);
 
-  --vp-c-brand-1: #245dff;
-  --vp-c-brand-2: #3d6fff;
-  --vp-c-brand-3: #1a4ae0;
-  --vp-c-brand-soft: rgba(36, 93, 255, 0.12);
+  --color-surface: #ffffff;
+  --color-surface-muted: #e8eef1;
+  --color-ink: #0b1220;
+  --color-ink-soft: #3d4a5c;
+  --color-ink-faint: #6b7a8d;
+  --color-accent: #0f766e;
+  --color-accent-bright: #14b8a6;
+  --color-accent-deep: #0d5c56;
+  --color-link: #0f766e;
+  --color-border-strong: rgba(11, 18, 32, 0.14);
+  --color-lift: 0 10px 28px rgba(11, 18, 32, 0.07);
 
-  --vp-c-default-1: #172238;
-  --vp-c-default-2: #2a3a58;
-  --vp-c-default-3: #5a6b88;
+  /* VitePress tokens */
+  --vp-c-brand-1: #0f766e;
+  --vp-c-brand-2: #14b8a6;
+  --vp-c-brand-3: #0d5c56;
+  --vp-c-brand-soft: rgba(20, 184, 166, 0.12);
 
-  --vp-c-bg: #eceff3;
-  --vp-c-bg-alt: #eef1f5;
-  --vp-c-bg-soft: #f8f9fb;
-  --vp-c-bg-elv: #f8f9fb;
+  --vp-c-default-1: #0b1220;
+  --vp-c-default-2: #3d4a5c;
+  --vp-c-default-3: #6b7a8d;
 
-  --vp-c-divider: rgba(24, 36, 61, 0.14);
-  --vp-c-border: rgba(24, 36, 61, 0.22);
-  --vp-c-gutter: #eef1f5;
+  --vp-c-bg: #f2f5f7;
+  --vp-c-bg-alt: #e8eef1;
+  --vp-c-bg-soft: #ffffff;
+  --vp-c-bg-elv: #ffffff;
 
-  --vp-c-text-1: #172238;
-  --vp-c-text-2: #2a3a58;
-  --vp-c-text-3: #5a6b88;
+  --vp-c-divider: rgba(11, 18, 32, 0.1);
+  --vp-c-border: rgba(11, 18, 32, 0.12);
+  --vp-c-gutter: #e8eef1;
 
-  --vp-button-brand-bg: #245dff;
-  --vp-button-brand-hover-bg: #1a4ae0;
-  --vp-button-brand-active-bg: #153db8;
-  --vp-button-brand-border: #18243d;
-  --vp-button-brand-hover-border: #245dff;
+  --vp-c-text-1: #0b1220;
+  --vp-c-text-2: #3d4a5c;
+  --vp-c-text-3: #6b7a8d;
 
-  --vp-custom-block-tip-border: #245dff;
-  --vp-custom-block-tip-bg: rgba(36, 93, 255, 0.08);
-  --vp-custom-block-tip-text: #172238;
+  --vp-button-brand-bg: #0f766e;
+  --vp-button-brand-hover-bg: #0d5c56;
+  --vp-button-brand-active-bg: #0a4a45;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-text: #ffffff;
+
+  --vp-custom-block-tip-border: #14b8a6;
+  --vp-custom-block-tip-bg: rgba(20, 184, 166, 0.1);
+  --vp-custom-block-tip-text: #0b1220;
 
   --vp-nav-height: 60px;
-  --vp-nav-bg-color: rgba(236, 239, 243, 0.9);
+  --vp-nav-bg-color: rgba(242, 245, 247, 0.78);
   --vp-nav-shadow: 0 1px 0 var(--vp-c-divider);
 
   --vp-sidebar-bg-color: transparent;
-  --vp-code-block-bg: #f8f9fb;
+  --vp-code-block-bg: #ebf1f4;
 
-  --vp-font-family-base: "DINNextW05-Medium", "Noto Sans", "Roboto", sans-serif;
-  --vp-font-family-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
-  --vp-font-family-heading: "Tungsten-Bold", "Oswald", "Roboto", sans-serif;
+  --vp-font-family-base:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --vp-font-family-mono:
+    ui-monospace, "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --vp-font-family-heading:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .dark {
-  --color-body-bg: #0f1727;
-  --color-list-bg: #172338;
-  --color-list-bg-strong: #20304d;
-  --color-list-border: #d8e5ff;
-  --color-list-font: #f1f6ff;
-  --color-accent: #8db2ff;
-  --color-link: #9ec0ff;
-  --color-page-grad-1: #182746;
-  --color-page-grad-2: #1a2e52;
-  --color-page-grad-3: #17345e;
-  --color-brutal-shadow: 4px 4px 0 #d8e5ff;
+  --color-body-bg: #0a1018;
+  --color-page-grad-1: rgba(45, 212, 191, 0.1);
+  --color-page-grad-2: rgba(56, 189, 248, 0.08);
+  --color-page-grad-3: rgba(15, 23, 32, 0.95);
+  --color-mesh-spot: rgba(20, 184, 166, 0.12);
 
-  --vp-c-brand-1: #8db2ff;
-  --vp-c-brand-2: #9ec0ff;
-  --vp-c-brand-3: #6a9aff;
-  --vp-c-brand-soft: rgba(141, 178, 255, 0.14);
+  --color-surface: #121a24;
+  --color-surface-muted: #1a2432;
+  --color-ink: #eef3f7;
+  --color-ink-soft: #b4c2d0;
+  --color-ink-faint: #7d8fa3;
+  --color-accent: #2dd4bf;
+  --color-accent-bright: #5eead4;
+  --color-accent-deep: #14b8a6;
+  --color-link: #5eead4;
+  --color-border-strong: rgba(238, 243, 247, 0.14);
+  --color-lift: 0 12px 32px rgba(0, 0, 0, 0.35);
 
-  --vp-c-bg: #0f1727;
-  --vp-c-bg-alt: #172338;
-  --vp-c-bg-soft: #172338;
-  --vp-c-bg-elv: #20304d;
+  --vp-c-brand-1: #2dd4bf;
+  --vp-c-brand-2: #5eead4;
+  --vp-c-brand-3: #14b8a6;
+  --vp-c-brand-soft: rgba(45, 212, 191, 0.14);
 
-  --vp-c-divider: rgba(216, 229, 255, 0.16);
-  --vp-c-border: rgba(216, 229, 255, 0.28);
-  --vp-c-gutter: #172338;
+  --vp-c-bg: #0a1018;
+  --vp-c-bg-alt: #121a24;
+  --vp-c-bg-soft: #121a24;
+  --vp-c-bg-elv: #1a2432;
 
-  --vp-c-text-1: #f1f6ff;
-  --vp-c-text-2: #c8d6f0;
-  --vp-c-text-3: #8fa3c4;
+  --vp-c-divider: rgba(238, 243, 247, 0.1);
+  --vp-c-border: rgba(238, 243, 247, 0.14);
+  --vp-c-gutter: #121a24;
 
-  --vp-button-brand-bg: #8db2ff;
-  --vp-button-brand-hover-bg: #9ec0ff;
-  --vp-button-brand-active-bg: #6a9aff;
-  --vp-button-brand-border: #d8e5ff;
-  --vp-button-brand-hover-border: #8db2ff;
+  --vp-c-text-1: #eef3f7;
+  --vp-c-text-2: #b4c2d0;
+  --vp-c-text-3: #7d8fa3;
 
-  --vp-custom-block-tip-border: #8db2ff;
-  --vp-custom-block-tip-bg: rgba(141, 178, 255, 0.1);
-  --vp-custom-block-tip-text: #f1f6ff;
+  --vp-button-brand-bg: #14b8a6;
+  --vp-button-brand-hover-bg: #2dd4bf;
+  --vp-button-brand-active-bg: #0f766e;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-text: #041016;
 
-  --vp-nav-bg-color: rgba(15, 23, 39, 0.9);
-  --vp-code-block-bg: #172338;
+  --vp-custom-block-tip-border: #2dd4bf;
+  --vp-custom-block-tip-bg: rgba(45, 212, 191, 0.1);
+  --vp-custom-block-tip-text: #eef3f7;
+
+  --vp-nav-bg-color: rgba(10, 16, 24, 0.8);
+  --vp-code-block-bg: #121a24;
 }
 
-/* Page atmosphere — radial gradients from personal site */
+/* Page atmosphere */
 html,
 body {
   background-color: var(--color-body-bg);
@@ -158,21 +137,26 @@ body {
 
 body {
   background-image:
-    radial-gradient(circle at 10% 10%, var(--color-page-grad-1), transparent 45%),
-    radial-gradient(circle at 85% 18%, var(--color-page-grad-2), transparent 35%),
-    radial-gradient(circle at 78% 85%, var(--color-page-grad-3), transparent 42%);
+    radial-gradient(ellipse 70% 50% at 8% -10%, var(--color-page-grad-1), transparent 55%),
+    radial-gradient(ellipse 55% 45% at 92% 8%, var(--color-page-grad-2), transparent 50%),
+    radial-gradient(ellipse 60% 50% at 70% 100%, var(--color-mesh-spot), transparent 55%),
+    linear-gradient(180deg, var(--color-page-grad-3), transparent 40%);
   background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Nav */
 .VPNavBar {
-  backdrop-filter: blur(12px);
+  backdrop-filter: saturate(1.2) blur(16px);
+  -webkit-backdrop-filter: saturate(1.2) blur(16px);
 }
 
 .VPNavBarTitle .title {
   font-family: var(--vp-font-family-heading);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  font-size: 1.15rem;
 }
 
 .VPNavBarMenuLink.active,
@@ -181,6 +165,21 @@ body {
 }
 
 /* Sidebar */
+.VPSidebarItem.is-active > .item > .link::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 20%;
+  bottom: 20%;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--color-accent-bright), var(--color-accent));
+}
+
+.VPSidebarItem.is-active > .item {
+  position: relative;
+}
+
 .VPSidebarItem.is-active > .item > .text {
   color: var(--vp-c-brand-1);
   font-weight: 600;
@@ -189,125 +188,227 @@ body {
 .VPSidebarItem.level-0 > .item > .text {
   font-family: var(--vp-font-family-heading);
   font-weight: 700;
-  letter-spacing: -0.01em;
-  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  font-size: 0.95rem;
+  text-transform: none;
 }
 
 /* Content typography */
+.vp-doc {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
 .vp-doc h1,
 .vp-doc h2,
-.vp-doc h3 {
+.vp-doc h3,
+.vp-doc h4 {
   font-family: var(--vp-font-family-heading);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
 .vp-doc h1 {
-  letter-spacing: -0.03em;
-  font-size: 2.4rem;
+  letter-spacing: -0.035em;
+  font-size: clamp(2rem, 4vw, 2.55rem);
+  line-height: 1.15;
+  background: linear-gradient(
+    120deg,
+    var(--color-ink) 0%,
+    var(--color-ink) 55%,
+    var(--color-accent) 120%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .vp-doc h1 {
+  background: linear-gradient(
+    120deg,
+    var(--color-ink) 0%,
+    var(--color-accent-bright) 130%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .vp-doc h2 {
-  border-top: 1px solid var(--vp-c-divider);
-  padding-top: 1.25rem;
-  margin-top: 2rem;
+  border-top: none;
+  border-bottom: none;
+  padding-top: 0.35rem;
+  margin-top: 2.25rem;
+  position: relative;
+}
+
+.vp-doc h2::before {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 3px;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+  background: linear-gradient(90deg, var(--color-accent-bright), var(--color-accent));
 }
 
 .vp-doc a {
   color: var(--color-link);
   font-weight: 500;
+  text-underline-offset: 0.18em;
+}
+
+.vp-doc a:hover {
+  color: var(--color-accent-deep);
+}
+
+.dark .vp-doc a:hover {
+  color: var(--color-accent-bright);
 }
 
 .vp-doc ul > li::marker {
   color: var(--vp-c-brand-2);
 }
 
-/* Code blocks — brutalist card feel */
+.vp-doc table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--color-lift);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: color-mix(in srgb, var(--color-accent-bright) 6%, transparent);
+}
+
+/* Code */
 .vp-doc div[class*="language-"] {
-  border: 2px solid var(--color-list-border);
+  border: 1px solid var(--color-border-strong);
   border-radius: 14px;
-  background-color: var(--color-list-bg);
+  background-color: var(--vp-code-block-bg);
+  box-shadow: var(--color-lift);
 }
 
 .vp-doc :not(pre) > code {
   border: 1px solid var(--vp-c-border);
   border-radius: 6px;
-  background-color: var(--color-list-bg);
+  background-color: color-mix(in srgb, var(--color-accent-bright) 10%, var(--color-surface));
+  color: var(--color-accent-deep);
+  font-weight: 500;
+}
+
+.dark .vp-doc :not(pre) > code {
+  color: var(--color-accent-bright);
 }
 
 /* Buttons */
 .VPButton.brand {
-  border: 2px solid var(--color-list-border) !important;
+  border: none !important;
   border-radius: 12px;
-  transition: all 0.15s ease;
+  background: linear-gradient(135deg, var(--color-accent-bright), var(--color-accent)) !important;
+  color: #041016 !important;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(15, 118, 110, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
 }
 
 .VPButton.brand:hover {
-  border-color: var(--color-accent) !important;
-  box-shadow: var(--color-brutal-shadow);
-  transform: translate(-2px, -2px);
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(15, 118, 110, 0.34);
 }
 
 .VPButton.alt {
-  border: 2px solid var(--color-list-border) !important;
+  border: 1px solid var(--color-border-strong) !important;
   border-radius: 12px;
-  background-color: var(--color-list-bg) !important;
-  transition: all 0.15s ease;
+  background-color: var(--color-surface) !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .VPButton.alt:hover {
   border-color: var(--color-accent) !important;
-  background-color: var(--color-list-bg-strong) !important;
-  box-shadow: var(--color-brutal-shadow);
-  transform: translate(-2px, -2px);
+  box-shadow: var(--color-lift);
+  transform: translateY(-1px);
 }
 
 /* Custom blocks */
 .vp-doc .custom-block {
-  border: 2px solid var(--color-list-border);
+  border: 1px solid var(--color-border-strong);
   border-radius: 14px;
+  box-shadow: var(--color-lift);
 }
 
 .vp-doc .custom-block.tip {
-  border-color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-accent-bright) 12%, transparent),
+      transparent 55%
+    ),
+    var(--vp-custom-block-tip-bg);
 }
 
 /* Search */
 .VPLocalSearchBox .result.selected {
-  border: 2px solid var(--vp-c-brand-1);
-  box-shadow: var(--color-brutal-shadow);
+  border: 1px solid var(--vp-c-brand-1);
+  box-shadow: var(--color-lift);
   border-radius: 12px;
+  background: color-mix(in srgb, var(--color-accent-bright) 10%, var(--color-surface));
 }
 
 .VPLocalSearchBox .search-bar {
-  border: 2px solid var(--color-list-border) !important;
+  border: 1px solid var(--color-border-strong) !important;
   border-radius: 12px;
+  box-shadow: var(--color-lift);
 }
 
 /* Doc footer prev/next */
 .pager-link {
-  border: 2px solid var(--color-list-border) !important;
+  border: 1px solid var(--color-border-strong) !important;
   border-radius: 14px;
-  background-color: var(--color-list-bg);
-  transition: all 0.15s ease;
+  background-color: var(--color-surface);
+  box-shadow: var(--color-lift);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
 .pager-link:hover {
   border-color: var(--color-accent) !important;
-  background-color: var(--color-list-bg-strong);
-  box-shadow: var(--color-brutal-shadow);
-  transform: translate(-2px, -2px);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(15, 118, 110, 0.14);
 }
 
-/* Appearance toggle — chip-like */
+.pager-link .title {
+  color: var(--color-accent);
+}
+
+/* Appearance toggle */
 .VPSwitch {
-  border: 2px solid var(--color-list-border);
+  border: 1px solid var(--color-border-strong);
 }
 
-/* Home / hero title */
+/* Home / hero */
 .VPHome .VPHero .name,
 .VPHome .VPHero .text {
   font-family: var(--vp-font-family-heading);
-  color: var(--color-accent);
-  -webkit-text-fill-color: unset;
-  background: none;
+  letter-spacing: -0.035em;
+  background: linear-gradient(120deg, var(--color-ink), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.VPHome .VPHero .tagline {
+  color: var(--color-ink-soft);
+  max-width: 36rem;
+}
+
+/* Soft card feel on aside outline */
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+}
+
+.VPDocAsideOutline .outline-marker {
+  background: linear-gradient(180deg, var(--color-accent-bright), var(--color-accent));
+  width: 3px;
+  border-radius: 999px;
 }
